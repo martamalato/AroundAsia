@@ -1,14 +1,207 @@
-body {
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f6f1e8;
-  color: #2e2e2e;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  background: #f5f0e8;
+  color: #1f1f1f;
+  line-height: 1.7;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 24px 60px;
+
+  background: rgba(245, 240, 232, 0.88);
+  backdrop-filter: blur(12px);
+
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1f1f1f;
+  font-size: 0.95rem;
+  transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+  opacity: 0.6;
 }
 
 .hero {
   height: 100vh;
+
+  background:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url('assets/hero.jpg');
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 8%;
+}
+
+.hero-content {
+  max-width: 700px;
+  color: white;
+}
+
+.eyebrow {
+  letter-spacing: 0.25em;
+  margin-bottom: 18px;
+  font-size: 0.8rem;
+}
+
+.eyebrow.dark {
+  color: #486b5d;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  line-height: 1;
+  margin-bottom: 28px;
+}
+
+.hero-text {
+  font-size: 1.1rem;
+  max-width: 600px;
+}
+
+.map-section {
+  padding: 120px 8%;
+  background: #efe7dc;
+}
+
+.map-text {
+  max-width: 700px;
+  margin-bottom: 40px;
+}
+
+.map-text h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.map-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+#map {
+  height: 700px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+}
+
+.countries {
+  padding: 120px 8%;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 28px;
+}
+
+.country-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  min-height: 500px;
+  cursor: pointer;
+}
+
+.country-card img {
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.country-card:hover img {
+  transform: scale(1.06);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(to top,
+    rgba(0,0,0,0.72),
+    transparent);
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+
+  padding: 34px;
+
+  color: white;
+}
+
+.overlay h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+
+  header {
+    padding: 20px;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .map-text h2 {
+    font-size: 2.2rem;
+  }
+
+  #map {
+    height: 500px;
+  }
+
 }
