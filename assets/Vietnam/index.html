@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vietnam | Around Asia</title>
+
+<style>
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  background: #f7f3ed;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+  height: 45vh;
+  background: url("vietnam.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+  color: white;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+}
+
+.hero h1 {
+  font-size: 52px;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1050px;
+  margin: auto;
+  padding: 50px 25px;
+}
+
+/* SECTIONS */
+section {
+  margin-bottom: 60px;
+}
+
+h2 {
+  color: #486b5d;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 16px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* CARDS */
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  margin-bottom: 25px;
+}
+
+.card:last-child {
+  margin-bottom: 0;
+}
+
+/* TAGS */
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  background: #486b5d;
+  color: white;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* STATS GRID */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.stat-box {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  border-top: 3px solid #486b5d;
+}
+
+.stat-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #777;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+}
+
+.stat-sub {
+  font-size: 13px;
+  color: #555;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+/* MULTI-COLUMN ROWS */
+.feature-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.feature-block {
+  background: #fbf9f6;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #486b5d;
+}
+
+.feature-block h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #486b5d;
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  border-left: 2px solid #eae4da;
+}
+
+.timeline-event {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-event:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-event::before {
+  content: "";
+  position: absolute;
+  left: -37px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #486b5d;
+  border: 4px solid white;
+}
+
+.timeline-time {
+  font-weight: 700;
+  color: #486b5d;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.timeline-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+/* BULLET LIST STYLING */
+ul {
+  padding-left: 20px;
+  margin: 10px 0 0 0;
+}
+
+li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* CITIES GRID */
+.cities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.city {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid transparent;
+}
+
+.city::after {
+  content: "→";
+  color: #486b5d;
+  transition: transform 0.2s;
+}
+
+.city:hover {
+  border-color: #486b5d;
+  color: #486b5d;
+  background: #fbf9f6;
+  transform: translateY(-2px);
+}
+
+.city:hover::after {
+  transform: translateX(4px);
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <h1>Vietnam</h1>
+</div>
+
+<div class="container">
+
+  <!-- OVERVIEW -->
+  <section>
+    <span class="tag">Overview</span>
+    <h2>A country shaped by history, resilience & rapid growth</h2>
+    <div class="card">
+      <p>
+        Vietnam is famously known as a land of warm smiles, millions of buzzing scooters, and a vibrant street culture. Everyday life thrives outdoors, where locals gather on tiny plastic stools on the sidewalks to share fresh spring rolls, steaming bowls of phở, and crispy Vietnamese pancakes (bánh xèo). 
+      </p>
+      <p>
+        Politically, Vietnam is a single-party socialist state led by the Communist Party of Vietnam. It runs on a hybrid economic model: the government keeps strong control over vital sectors like banking, energy, and telecom, while letting private companies and foreign factories grow rapidly.
+      </p>
+    </div>
+  </section>
+
+  <!-- KEY FACTS -->
+  <section>
+    <span class="tag">Numbers</span>
+    <h2>Key Facts & Demographics</h2>
+    <div class="stats-grid">
+      <div class="stat-box">
+        <div class="stat-label">Population & Scale</div>
+        <div class="stat-value">~100M</div>
+        <div class="stat-sub">Spanning a total geographic area of 331,000 km².</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">Economic Scale</div>
+        <div class="stat-value">$450–$500B</div>
+        <div class="stat-sub">Sustaining an annual growth rate of 5%–7%.</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">Hub Cities</div>
+        <div class="stat-value">Hanoi & HCMC</div>
+        <div class="stat-sub">Hanoi serves as the capital; Ho Chi Minh City is the largest city.</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">Digital Presence</div>
+        <div class="stat-value">~80% Online</div>
+        <div class="stat-sub">With 75%–85% active users across social media networks.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAILY LIFE & SOCIAL TRENDS -->
+  <section>
+    <span class="tag">Daily Life</span>
+    <h2>Culture, Behavior & Sidewalk Rituals</h2>
+    <div class="card">
+      <p>
+        Vietnamese daily life is strongly shaped by collectivism, practicality, and climate-adapted living. Family and local networks strongly influence social and economic decisions.
+      </p>
+      
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Coffee Culture</h3>
+          <p>Social life is highly public—food stalls, plastic stools, and street cafés are central to daily interaction. This is powered by <strong>Cà phê sữa đá</strong> (Vietnamese iced milk coffee)—a strong brew made from slow-dripped, dark-roast Robusta beans mixed with sweet condensed milk over ice. Because Robusta beans contain nearly double the caffeine of standard Arabica beans, it packs an exceptionally powerful punch. Popular variations also include egg coffee and salted coffee.</p>
+        </div>
+        <div class="feature-block">
+          <h3>Smoking Habits</h3>
+          <p>Very often, a cup of street coffee comes paired with a cigarette. Vietnam remains one of the countries with the highest rates of male smokers in the world, sitting within the global top 15 nations. Recent healthcare data indicates that roughly <strong>41% of Vietnamese adult men smoke</strong>, contrasting sharply with less than 1% of women in the country.</p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Staple Foods</h3>
+          <p>Food is typically served family-style, with dishes placed in the center. Common staples include pho, spring rolls, bun cha, banh xeo, and rice-based dishes.</p>
+        </div>
+        <div class="feature-block">
+          <h3>Scooters & Footwear</h3>
+          <p>Scooters are the dominant transport mode due to affordability, flexibility in dense cities, and infrastructure designed around narrow streets. Sandals or slippers are widely used due to the hot and humid climate and frequent transitions between indoor and outdoor spaces.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ECONOMY -->
+  <section>
+    <span class="tag">Economy</span>
+    <h2>From Central Planning to Export Powerhouse</h2>
+    <div class="card">
+      <p>
+        Vietnam is widely considered one of the fastest-growing economies in Asia over the past two decades, with sustained GDP growth typically around <strong>5–7% annually</strong> (averaging 6% to 7% every year). This easily beats mature regional neighbors like Thailand and Malaysia, which grow around 2.5% to 4.5% in industrial expansion and export growth over the same period.
+      </p>
+      <p>
+        Since the Đổi Mới reforms (1986), Vietnam has transitioned from a centrally planned economy to a <strong>“socialist-oriented market economy”</strong>, where private enterprise and foreign investment operate alongside strong state-owned enterprises in strategic sectors. A large part of this transformation is driven by integration into global manufacturing networks, becoming a key alternative to China in global supply chains for companies diversifying production (the <strong>“China +1” strategy</strong>).
+      </p>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Global Export Rankings</h3>
+          <p>Today, Vietnam is one of Asia's top export hubs. It is the <strong>world's 2nd largest exporter of smartphones</strong>—trailing only China, and ranking just ahead of India. This is heavily driven by tech giants like Samsung, which builds roughly half of its global phone supply inside Vietnamese factories. Furthermore, Vietnam is the <strong>3rd largest exporter of clothing and textiles</strong> globally.</p>
+        </div>
+        <div class="feature-block">
+          <h3>Labor & Minimum Wage</h3>
+          <p>To ensure basic living standards within this production ecosystem, Vietnam splits its legal minimum wage into four geographic areas. The official minimum salary ranges from about <strong>€130 per month</strong> in rural villages up to <strong>€185 per month</strong> in major cities like Ho Chi Minh City and Hanoi.</p>
+        </div>
+      </div>
+
+      <h3 style="color: #486b5d; margin-top: 25px; margin-bottom: 10px; font-size: 20px;">Key Growth Drivers:</h3>
+      <ul>
+        <li><strong>Relocation of global supply chains</strong> (“China +1” strategy)</li>
+        <li><strong>Electronics manufacturing hubs:</strong> Samsung, Apple suppliers, LG, Intel</li>
+        <li><strong>Textiles & footwear industries:</strong> Nike, Adidas, and global apparel production networks</li>
+        <li><strong>Foreign Direct Investment (FDI):</strong> Highly targeted, export-oriented industrial zones</li>
+        <li><strong>Urbanization & rising consumption:</strong> An expanding, dynamic middle class in major cities</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- HISTORY -->
+  <section>
+    <span class="tag">History</span>
+    <h2>Layered Influences & Resilience</h2>
+    <div class="card">
+      <p>
+        The deep foundation of modern Vietnam is a long history of intense resilience, surviving shifting global powers while fiercely preserving its national identity.
+      </p>
+      
+      <div class="timeline" style="margin-top: 25px;">
+        <div class="timeline-event">
+          <div class="timeline-time">111 BC – 939 AD (1000+ Years)</div>
+          <div class="timeline-title">Imperial Chinese Rule</div>
+          <p>Long historical periods of Chinese rule shaped administration, Confucian values, and governance systems. Many cultural and bureaucratic structures still show influence today, though Vietnam preserved its cultural identity through constant resistance.</p>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-time">1858 – 1954</div>
+          <div class="timeline-title">French Colonial Era</div>
+          <p>The colonial period subjected the people to harsh forced labor. It also introduced Western-style architecture, Catholic influence, coffee culture, and the Latin-based Vietnamese writing system (<strong>Quốc Ngữ</strong>), which replaced classical Chinese scripts.</p>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-time">1955 – 1975</div>
+          <div class="timeline-title">USA / Vietnam War & Independence</div>
+          <p>The biggest test came in the mid-1900s when the United States intervened with massive military power to stop communism. This Cold War conflict between the communist North and US-supported South caused major destruction. Led by <strong>Hồ Chí Minh</strong>, Vietnamese forces fought a decades-long war, ultimately winning full independence (originally declared in <strong>1945</strong>) and reunifying the country under communist leadership in 1975, deeply shaping modern national identity.</p>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-time">1975 – 1985</div>
+          <div class="timeline-title">Post-Reunification Era</div>
+          <p>Reunification under a socialist state with centralized, Soviet-style planned governance over a war-torn, struggling economy.</p>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-time">1986 – Present</div>
+          <div class="timeline-title">The Đổi Mới Reforms</div>
+          <p>The government launched the <strong>Đổi Mới (Renovation) reforms</strong> to save the economy. This policy completely shifted Vietnam away from central planning by allowing private businesses to open, removing government price controls, and opening borders to international trade and foreign investment, sparking the modern economic boom.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LANGUAGE -->
+  <section>
+    <span class="tag">Language</span>
+    <h2>Communication</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Official Language:</strong> Vietnamese, a tonal language utilizing 6 distinct tones.</li>
+        <li><strong>Writing System:</strong> The Latin-based script <strong>Quốc Ngữ</strong>.</li>
+        <li><strong>Linguistic Diversity:</strong> Home to over <strong>100+ ethnic groups</strong>, each preserving their own distinct minority languages alongside the official tongue.</li>
+        <li><strong>English Fluency:</strong> Usage is rapidly increasing among urban youth populations.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CITIES -->
+  <section>
+    <span class="tag">Journey</span>
+    <h2>Cities We Visited</h2>
+    <div class="cities">
+      <a class="city" href="HCMC/hcmc.html">Ho Chi Minh City</a>
+      <a class="city" href="Hanoi/hanoi.html">Hanoi</a>
+      <a class="city" href="Da Nang/danang.html">Da Nang</a>
+      <a class="city" href="Hoi An/hoian.html">Hoi An</a>
+      <a class="city" href="Ninh Binh/ninhbinh.html">Ninh Binh</a>
+      <a class="city" href="Sa Pa/sapa.html">Sa Pa</a>
+      <a class="city" href="Ha Giang Loop/hagiangloop.html">Ha Giang Loop</a>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Around Asia Map</title>
 
   <link
@@ -11,14 +12,46 @@
   />
 
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: Inter, sans-serif;
       background: #f5f0e8;
     }
 
+    header {
+      height: 80px;
+      background: white;
+      border-bottom: 1px solid #e5e5e5;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #486b5d;
+    }
+
+    .home-link {
+      text-decoration: none;
+      color: #486b5d;
+      font-weight: 600;
+    }
+
+    .home-link:hover {
+      text-decoration: underline;
+    }
+
     #map {
-      height: 100vh;
+      height: calc(100vh - 80px);
       width: 100%;
     }
 
@@ -26,9 +59,28 @@
       font-size: 14px;
       line-height: 1.5;
     }
+
+    .leaflet-popup-content a {
+      color: #486b5d;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .leaflet-popup-content a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
+
 <body>
+
+<header>
+  <div class="logo">AROUND ASIA</div>
+
+  <a href="index.html" class="home-link">
+    ← Back to Home
+  </a>
+</header>
 
 <div id="map"></div>
 
@@ -36,7 +88,7 @@
 
 <script>
 
-const map = L.map('map').setView([5, 110], 4);
+const map = L.map('map').setView([10, 110], 4);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
@@ -44,58 +96,140 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 const places = [
 
+  // VIETNAM
   {
-    name: "Ho Chi Minh",
+    name: "Ho Chi Minh City",
     coords: [10.8231, 106.6297],
-    link: "vietnam/hochiminh.html"
+    link: "assets/Vietnam/HCMC/hcmc.html"
+  },
+  {
+    name: "Da Nang",
+    coords: [16.0544, 108.2022],
+    link: "assets/Vietnam/Da Nang/danang.html"
+  },
+  {
+    name: "Hanoi",
+    coords: [21.0285, 105.8542],
+    link: "assets/Vietnam/Hanoi/hanoi.html"
+  },
+  {
+    name: "Hoi An",
+    coords: [15.8801, 108.3380],
+    link: "assets/Vietnam/Hoi An/hoian.html"
+  },
+  {
+    name: "Ninh Binh",
+    coords: [20.2506, 105.9745],
+    link: "assets/Vietnam/Ninh Binh/ninhbinh.html"
+  },
+  {
+    name: "Phong Nha",
+    coords: [17.6103, 106.3094],
+    link: "assets/Vietnam/Phong Nha/phongnha.html"
+  },
+  {
+    name: "Sa Pa",
+    coords: [22.3364, 103.8438],
+    link: "assets/Vietnam/Sa Pa/sapa.html"
+  },
+  {
+    name: "Ha Giang Loop",
+    coords: [22.8233, 104.9836],
+    link: "assets/Vietnam/Ha Giang Loop/hagiangloop.html"
   },
 
+  // MALAYSIA
   {
     name: "Kuala Lumpur",
     coords: [3.1390, 101.6869],
-    link: "malaysia/kualalumpur.html"
+    link: "assets/Malaysia/Kuala Lumpur/kualalumpur.html"
   },
-
   {
     name: "Langkawi",
     coords: [6.3500, 99.8000],
-    link: "malaysia/langkawi.html"
+    link: "assets/Malaysia/Langkawi/langkawi.html"
+  },
+  {
+    name: "Penang",
+    coords: [5.4164, 100.3327],
+    link: "assets/Malaysia/Penang/penang.html"
   },
 
+  // SINGAPORE
   {
     name: "Singapore",
     coords: [1.3521, 103.8198],
-    link: "singapore/index.html"
+    link: "assets/Singapore/singapore.html"
   },
 
+  // INDONESIA
+  {
+    name: "Bali",
+    coords: [-8.4095, 115.1889],
+    link: "assets/Indonesia/Bali/bali.html"
+  },
   {
     name: "Lombok",
     coords: [-8.6500, 116.3249],
-    link: "indonesia/lombok.html"
+    link: "assets/Indonesia/Lombok/lombok.html"
+  },
+  {
+    name: "Sumatra",
+    coords: [0.5897, 101.3431],
+    link: "assets/Indonesia/Sumatra/sumatra.html"
+  },
+
+  // HONG KONG
+  {
+    name: "Hong Kong",
+    coords: [22.3193, 114.1694],
+    link: "assets/Hong Kong/hongkong.html"
+  },
+
+  // TAIWAN
+  {
+    name: "Taipei",
+    coords: [25.0330, 121.5654],
+    link: "assets/Taiwan/Taipe/taipe.html"
+  },
+  {
+    name: "Tainan",
+    coords: [22.9997, 120.2270],
+    link: "assets/Taiwan/Tainan/tainan.html"
+  },
+  {
+    name: "Kenting",
+    coords: [21.9483, 120.7798],
+    link: "assets/Taiwan/Kenting/kenting.html"
+  },
+  {
+    name: "Dulan",
+    coords: [22.8717, 121.2336],
+    link: "assets/Taiwan/Dulan/dulan.html"
+  },
+  {
+    name: "Taroko Park",
+    coords: [24.1544, 121.6226],
+    link: "assets/Taiwan/Taroko Park/taroko.html"
+  },
+  {
+    name: "Taipingshan",
+    coords: [24.5430, 121.4970],
+    link: "assets/Taiwan/Taipinshan/taipingshan.html"
   }
 
 ];
 
-const route = [];
-
 places.forEach(place => {
 
-  L.marker(place.coords)
-    .addTo(map)
-    .bindPopup(`
-      <b>${place.name}</b><br>
-      <a href="${place.link}">Open destination</a>
-    `);
+  const marker = L.marker(place.coords).addTo(map);
 
-  route.push(place.coords);
+  marker.bindPopup(`
+    <strong>${place.name}</strong><br>
+    <a href="${place.link}">Read travel guide →</a>
+  `);
 
 });
-
-L.polyline(route, {
-  color: '#3f6b5b',
-  weight: 4,
-  opacity: 0.8
-}).addTo(map);
 
 </script>
 

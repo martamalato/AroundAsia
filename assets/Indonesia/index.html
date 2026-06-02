@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indonesia | Around Asia</title>
+
+<style>
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  background: #f7f3ed;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+  height: 45vh;
+  background: url("indonesia.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+  color: white;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+}
+
+.hero h1 {
+  font-size: 52px;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1050px;
+  margin: auto;
+  padding: 50px 25px;
+}
+
+/* SECTIONS */
+section {
+  margin-bottom: 60px;
+}
+
+h2 {
+  color: #b33939;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 16px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* CARDS */
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  margin-bottom: 25px;
+}
+
+.card:last-child {
+  margin-bottom: 0;
+}
+
+/* TAGS */
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  background: #b33939;
+  color: white;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* STATS GRID */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.stat-box {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  border-top: 3px solid #b33939;
+}
+
+.stat-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #777;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+}
+
+.stat-sub {
+  font-size: 13px;
+  color: #555;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+/* MULTI-COLUMN ROWS */
+.feature-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.feature-block {
+  background: #fbf9f6;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #b33939;
+}
+
+.feature-block h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #b33939;
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  border-left: 2px solid #eae4da;
+}
+
+.timeline-event {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-event:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-event::before {
+  content: "";
+  position: absolute;
+  left: -37px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #b33939;
+  border: 4px solid white;
+}
+
+.timeline-time {
+  font-weight: 700;
+  color: #b33939;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.timeline-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+/* BULLET LIST STYLING */
+ul {
+  padding-left: 20px;
+  margin: 10px 0 0 0;
+}
+
+li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* CITIES GRID */
+.cities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.city {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid transparent;
+}
+
+.city::after {
+  content: "→";
+  color: #b33939;
+  transition: transform 0.2s;
+}
+
+.city:hover {
+  border-color: #b33939;
+  color: #b33939;
+  background: #fbf9f6;
+  transform: translateY(-2px);
+}
+
+.city:hover::after {
+  transform: translateX(4px);
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <h1>Indonesia</h1>
+</div>
+
+<div class="container">
+
+  <!-- OVERVIEW -->
+  <section>
+    <span class="tag">Overview</span>
+    <h2>A land of profound faith, ancient temples & untamed wilderness</h2>
+    <div class="card">
+      <p>
+        Indonesia is an absolute giant of an archipelago, woven together by more than 17,000 islands and a vibrant clash of cultures. It holds the proud distinction of being home to the <strong>largest Muslim population in the entire world</strong>. Yet, walking its streets reveals a country where deeply rooted spiritual traditions shape everything from daily speech to magnificent island landscapes.
+      </p>
+      <p>
+        From the high-tech urban energy of Java to traditional villages operating on communal systems, life moves to the rhythm of spiritual devotion and local community gathering spaces. It's a country where pristine natural environments are treated not just as territory, but as sacred ancestral spaces.
+      </p>
+    </div>
+  </section>
+
+  <!-- KEY FACTS -->
+  <section>
+    <span class="tag">Numbers</span>
+    <h2>Key Facts & Demographics</h2>
+    <div class="stats-grid">
+      <div class="stat-box">
+        <div class="stat-label">Global Islamic Core</div>
+        <div class="stat-value">~240M</div>
+        <div class="stat-sub">Muslim adherents, making up roughly 87% of the 278M total population.</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">Economic Scale</div>
+        <div class="stat-value">$1.3–$1.5T</div>
+        <div class="stat-sub">Sustaining a steady, reliable annual GDP growth rate around 5%.</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">Hub Cities</div>
+        <div class="stat-value">Jakarta & IKN</div>
+        <div class="stat-sub">Jakarta serves as the historic center; Nusantara (IKN) is the new planned capital city.</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">Digital Presence</div>
+        <div class="stat-value">~78% Online</div>
+        <div class="stat-sub">With highly active mobile-first networks driving an e-commerce boom.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAILY LIFE & SOCIAL TRENDS -->
+  <section>
+    <span class="tag">Daily Life</span>
+    <h2>Warungs, Wild Coffee & Coastal Obsessions</h2>
+    <div class="card">
+      <p>
+        At the heart of real Indonesian culture is the local <strong>Warung</strong>—small, family-run neighborhood restaurants or street-side shacks where the community pulls up a bench to talk politics, eat, and drink coffee.
+      </p>
+      
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>The Warung & Kretek Habits</h3>
+          <p>The local warung is the ultimate anchor of daily life. This is where you find real, slow-cooked home food for pennies. In these spaces, sweet beverages come paired with aromatic smoke. Indonesia remains one of the world's highest tobacco consumers, where roughly <strong>60% to 70% of adult men smoke regularly</strong> (contrasting with under 3% of women). The air is dominated by <em>Kretek</em>—traditional cigarettes blended with shredded cloves and tobacco that crackle distinctly when burned.</p>
+        </div>
+        <div class="feature-block">
+          <h3>The Famous "Cat-Pooped" Coffee</h3>
+          <p>Indonesia is home to the world's most unusual specialty beverage: <strong>Kopi Luwak</strong>. This rare coffee is made from beans that have been eaten, digested, and pooped out by the Asian palm civet (a small, cat-like forest mammal). The civet naturally selects only the sweetest, ripest coffee cherries. Enzymes in its digestive tract break down the bean proteins, removing the bitterness and leaving an incredibly smooth, earthy flavor profile.</p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>World's Most Ultimate Waves</h3>
+          <p>For oceanic adventure, Indonesia is globally considered the absolute holy grail of surfing—unmatched by any other coastlines. While places like <strong>Hawaii</strong> or Australia boast legendary surf scenes, Indonesia's unique geography delivers the most powerful, flawless, and beautifully consistent tube waves on earth, drawing surf purists straight to the remote breaks of the Mentawai Islands, Uluwatu, and Nias.</p>
+        </div>
+        <div class="feature-block">
+          <h3>European Linguistic Remnants</h3>
+          <p>As you chat with locals, you'll hear fascinating echoes of European colonial history embedded straight into modern Indonesian vocabulary. Centuries of European contact left behind loanwords that feel oddly familiar. You'll find distinct Portuguese derivatives like <em>sepatu</em> (sapato/shoe) and <em>mentega</em> (manteiga/butter), along with heavy Dutch colonial remnants like <em>kantor</em> (kantoor/office) and <em>gratis</em> (gratis/free).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ECONOMY -->
+  <section>
+    <span class="tag">Economy</span>
+    <h2>From Resource Dependence to G20 Industrial Giant</h2>
+    <div class="card">
+      <p>
+        Indonesia stands proud as the largest economy in Southeast Asia and a key player on the global stage. It maintains consistent economic stability, with annual GDP growth holding steady around <strong>5% annually</strong>. This robust performance easily beats mature regional neighbors like Thailand and Malaysia, which grow around 2.5% to 4.5% over the same periods.
+      </p>
+      <p>
+        The nation operates a mixed market economic system where private commerce drives innovation alongside powerful state-owned companies managing utilities and major infrastructure projects. Over the past decade, Indonesia has successfully transitioned toward high-value manufacturing, utilizing strategic resource nationalism policies—such as banning raw mineral exports—to force global firms to construct advanced processing facilities locally.
+      </p>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Global Mineral & Supply Chain Rankings</h3>
+          <p>Today, Indonesia is the <strong>world's absolute largest producer of nickel</strong>, a critical component required for the global transition to electric vehicle (EV) batteries. This has drawn multi-billion dollar industrial investments from global battery and tech giants. Additionally, Indonesia stands as the <strong>world's top exporter of palm oil</strong> and a major supplier of thermal coal, rubber, and manufactured electronics.</p>
+        </div>
+        <div class="feature-block">
+          <h3>Labor & Minimum Wage Structure</h3>
+          <p>To regulate the diverse economic landscapes across its vast territory, minimum wages are managed independently by provincial governments. The monthly minimum salary ranges from approximately <strong>€125 per month</strong> in lower-cost provinces like Central Java up to roughly <strong>€315 per month</strong> in the economic and administrative center of Jakarta.</p>
+        </div>
+      </div>
+
+      <h3 style="color: #b33939; margin-top: 25px; margin-bottom: 10px; font-size: 20px;">Key Growth Drivers:</h3>
+      <ul>
+        <li><strong>Downstream mineral processing policies</strong> (Local battery and EV ecosystem development)</li>
+        <li><strong>Massive infrastructure construction:</strong> High-speed rail networks, ports, and the new capital city Nusantara</li>
+        <li><strong>Booming digital economy:</strong> Massive fintech adoption, e-commerce, and regional tech unicorns</li>
+        <li><strong>Abundant natural commodities:</strong> Global supply leadership in nickel, palm oil, and coal</li>
+        <li><strong>Demographic dividend:</strong> A rapidly expanding middle class with a low average population age</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- REGIONAL POWERHOUSES -->
+  <section>
+    <span class="tag">Islands</span>
+    <h2>Sumatra's Wild Jungles & Bali's Sacred Temples</h2>
+    <div class="card">
+      <p>
+        Indonesia's identity changes dramatically from one island to the next. The stark contrast between Sumatra's raw wilderness and Bali's highly refined artistic spirituality showcases the massive scope of the country.
+      </p>
+      
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Sumatra: Southeast Asia's Wild Frontier</h3>
+          <p>Sumatra is an legendary natural fortress, housing what is widely celebrated as the most extensive and biodiverse jungle area in Southeast Asia. This untamed rainforest landscape is one of the only places left on earth where critically endangered orangutans, rhinos, elephants, and tigers still live together in the wild. Its deep volcanic soils and ancient canopies create a rugged ecosystem that stands as a vital green lung for the entire planet.</p>
+        </div>
+        <div class="feature-block">
+          <h3>Bali: The Island of Temples</h3>
+          <p>In beautiful contrast, Bali is a vibrant spiritual anomaly—a deeply devoted Hindu enclave in an otherwise Muslim-majority nation. Known around the world as the "Island of a Thousand Temples," almost every single home, rice field, and volcanic peak features its own architectural sanctuary, framing the island's unique spiritual geography.</p>
+        </div>
+      </div>
+
+      <h3 style="color: #b33939; margin-top: 25px; margin-bottom: 10px; font-size: 20px;">The Deep Meaning of Indonesian Temples & Nature:</h3>
+      <ul>
+        <li><strong>What is a Temple? (Pura):</strong> Balinese Hindu temples are not closed halls for preaching; they are open-air walled sanctuaries designed to host visiting deities and ancestral spirits during religious festivals.</li>
+        <li><strong>Cosmic Axis Orientation:</strong> Every temple is strategically oriented along a sacred axis between the holy mountains (the realm of gods) and the surrounding open sea (the realm of unpredictable spirits).</li>
+        <li><strong>Nature Means Everything:</strong> In both ancient Buddhism (evident at the massive Borobudur temple) and Balinese Hinduism, nature and divinity are completely inseparable. Trees, rivers, mountains, and rocks are viewed as living vessels for spirits.</li>
+        <li><strong>The Tri Hita Karana Philosophy:</strong> Balinese life is guided by this core concept, which translates directly to the "three causes of prosperity"—requiring humans to maintain perfect, harmonious relationships with God, with their fellow community members, and directly with the natural environment.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- HISTORY & RELIGION -->
+  <section>
+    <span class="tag">History & Faith</span>
+    <h2>The Evolution of a Spiritual Superpower</h2>
+    <div class="card">
+      <p>
+        Indonesia's spiritual identity has been shaped by massive historical waves, creating a deep culture of religious tolerance and highly layered traditions.
+      </p>
+      
+      <div class="timeline" style="margin-top: 25px;">
+        <div class="timeline-event">
+          <div class="timeline-time">1st Century – 15th Century</div>
+          <div class="timeline-title">The Roots of Nature Worship & Golden Kingdoms</div>
+          <p>Early islanders practiced deep animism, treating the surrounding jungles, volcanoes, and rivers as living spirits. This naturally evolved as Hindu and Buddhist traders arrived from India, leading to grand maritime empires like Srivijaya and Majapahit. They constructed monumental structures like Borobudur and Prambanan, completely integrating architecture with natural spiritual axes.</p>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-time">13th Century – 16th Century</div>
+          <div class="timeline-title">The Rise of the Global Islamic Core</div>
+          <p>Sufi Muslim merchants and scholars introduced Islam along bustling regional spice trade routes. Instead of wiping out older traditions, the faith spread peacefully by blending directly with local Javanese customs, mystical philosophies, and traditional arts, laying the groundwork for the largest Islamic nation on earth.</p>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-time">1602 – 1942</div>
+          <div class="timeline-title">Dutch Colonial Era & Language Evolution</div>
+          <p>The Dutch East India Company (VOC) and later the Netherlands government enforced centuries of strict colonial rule to control the global spice market. Along with monumental political exploitation, this era permanently injected hundreds of Dutch administrative, mechanical, and everyday lifestyle terms directly into the local language.</p>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-time">1942 – 1945</div>
+          <div class="timeline-title">World War II & Japanese Occupation</div>
+          <p>A turbulent, brutal period of Japanese military control broke centuries of Dutch dominance. This era disrupted old colonial structures and rapidly accelerated the regional nationalist movements fighting for independent governance.</p>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-time">1945 – 1949</div>
+          <div class="timeline-title">Declaration of Independence & National Revolution</div>
+          <p>Nationalist leaders <strong>Sukarno</strong> and Mohammad Hatta boldly declared independence in <strong>1945</strong>. This triggered a grueling 4-year diplomatic and armed revolution against returning Dutch military forces, ending when the Netherlands officially recognized Indonesian sovereignty in late 1949.</p>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-time">1967 – 1998</div>
+          <div class="timeline-title">The "New Order" Regime</div>
+          <p>Under President Suharto, a highly centralized administration took control. It brought substantial economic growth and industrial modernization, but was heavily criti­cized for suppressing political opposition before collapsing during the 1997 Asian Financial Crisis.</p>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-time">1998 – Present</div>
+          <div class="timeline-title">The Reformasi Era & Modern Democracy</div>
+          <p>The <em>Reformasi</em> movement launched deep democratic and constitutional decentralization across the islands. Today, the nation proudly operates as a massive multi-faith democracy under the unifying national motto <em>Bhinneka Tunggal Ika</em> (Unity in Diversity).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LANGUAGE -->
+  <section>
+    <span class="tag">Language</span>
+    <h2>Communication & Dialects</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Official Language:</strong> Bahasa Indonesia, a standardized form of Malay that serves as a powerful unifying tongue.</li>
+        <li><strong>Writing System:</strong> Universal Latin-based script, adopted to maximize literacy and simplify administration.</li>
+        <li><strong>Linguistic Diversity:</strong> Home to over <strong>700+ living regional languages</strong>, with Javanese, Sundanese, and Balinese fiercely preserved by their communities.</li>
+        <li><strong>Global Literacy:</strong> English fluency is rising rapidly in tourist hubs and among business professionals in tier-1 urban areas.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CITIES -->
+  <section>
+    <span class="tag">Journey</span>
+    <h2>Cities We Visited</h2>
+    <div class="cities">
+      <a class="city" href="Bali/bali.html">Bali</a>
+      <a class="city" href="Lombok/lombok.html">Lombok</a>
+      <a class="city" href="Sumatra/sumatra.html">Sumatra</a>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>
