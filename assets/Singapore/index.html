@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Singapore | Around Asia</title>
+
+<style>
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  background: #f7f3ed;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+  height: 45vh;
+  background: url("singapore.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+  color: white;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+}
+
+.hero h1 {
+  font-size: 52px;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1050px;
+  margin: auto;
+  padding: 50px 25px;
+}
+
+/* SECTIONS */
+section {
+  margin-bottom: 60px;
+}
+
+h2 {
+  color: #486b5d;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 16px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  margin-bottom: 25px;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  background: #486b5d;
+  color: white;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* STATS GRID */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.stat-box {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  border-top: 3px solid #486b5d;
+}
+
+.stat-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #777;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+}
+
+.stat-sub {
+  font-size: 13px;
+  color: #555;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+/* FEATURE ROWS */
+.feature-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.feature-block {
+  background: #fbf9f6;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #486b5d;
+}
+
+.feature-block h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #486b5d;
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  border-left: 2px solid #eae4da;
+}
+
+.timeline-event {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-event::before {
+  content: "";
+  position: absolute;
+  left: -37px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #486b5d;
+  border: 4px solid white;
+}
+
+.timeline-time {
+  font-weight: 700;
+  color: #486b5d;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.timeline-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+/* LISTS */
+ul {
+  padding-left: 20px;
+  margin: 10px 0 0 0;
+}
+
+li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* CITIES */
+.cities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.city {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid transparent;
+}
+
+.city::after {
+  content: "→";
+  color: #486b5d;
+  transition: transform 0.2s;
+}
+
+.city:hover {
+  border-color: #486b5d;
+  color: #486b5d;
+  background: #fbf9f6;
+  transform: translateY(-2px);
+}
+
+.city:hover::after {
+  transform: translateX(4px);
+}
+
+.back {
+  display: inline-block;
+  margin-top: 30px;
+  color: #486b5d;
+  font-weight: 600;
+  text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <h1>Singapore</h1>
+</div>
+
+<div class="container">
+
+  <!-- OVERVIEW -->
+  <section>
+    <span class="tag">Overview</span>
+    <h2>A tiny country that became incredibly rich</h2>
+
+    <div class="card">
+      <p>
+        Singapore is one of the most impressive success stories in Asia. It is a tiny island country with almost no natural resources, yet it became one of the richest, safest and most modern countries in the world.
+      </p>
+
+      <p>
+        What makes Singapore even more fascinating is that it is a very young nation. It only became fully independent in <strong>1965</strong>. Before that, it was connected to the Malay world, became a British trading colony, was occupied by Japan during World War II, briefly joined Malaysia, and then suddenly became an independent country.
+      </p>
+
+      <p>
+        Today, Singapore is a city, an island and a country all at once. It is famous for its futuristic skyline, strict rules, clean streets, multicultural society, amazing food courts, powerful economy and one of the world's best airports.
+      </p>
+    </div>
+  </section>
+
+  <!-- KEY FACTS -->
+  <section>
+    <span class="tag">Numbers</span>
+    <h2>Key Facts & Demographics</h2>
+
+    <div class="stats-grid">
+
+      <div class="stat-box">
+        <div class="stat-label">Population & Scale</div>
+        <div class="stat-value">~6M</div>
+        <div class="stat-sub">
+          Around 6 million people living on only about 735 km², making it one of the world's most densely populated countries.
+        </div>
+      </div>
+
+      <div class="stat-box">
+        <div class="stat-label">Economic Scale</div>
+        <div class="stat-value">$500B+</div>
+        <div class="stat-sub">
+          A tiny country with one of the highest GDP per capita levels in the world.
+        </div>
+      </div>
+
+      <div class="stat-box">
+        <div class="stat-label">Currency</div>
+        <div class="stat-value">€1 ≈ S$1.45</div>
+        <div class="stat-sub">
+          Singapore uses the Singapore Dollar, one of Asia's strongest and most stable currencies.
+        </div>
+      </div>
+
+      <div class="stat-box">
+        <div class="stat-label">Independence</div>
+        <div class="stat-value">1965</div>
+        <div class="stat-sub">
+          Singapore became independent on 9 August 1965, making it one of Asia's youngest countries.
+        </div>
+      </div>
+
+      <div class="stat-box">
+        <div class="stat-label">Languages</div>
+        <div class="stat-value">4</div>
+        <div class="stat-sub">
+          English, Mandarin Chinese, Malay and Tamil are all official languages.
+        </div>
+      </div>
+
+      <div class="stat-box">
+        <div class="stat-label">Economy</div>
+        <div class="stat-value">Services</div>
+        <div class="stat-sub">
+          Finance, trade, logistics, tourism, technology and business services drive most of the economy.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BEFORE THE BRITISH -->
+  <section>
+    <span class="tag">Origins</span>
+    <h2>Who lived there before the British?</h2>
+
+    <div class="card">
+      <p>
+        Singapore was not empty before the British arrived. Long before modern Singapore existed, the island was known as <strong>Temasek</strong>, meaning something like “Sea Town”.
+      </p>
+
+      <p>
+        It was part of the wider Malay world and connected to regional trading networks. The people living around the island included Malays, fishermen, traders and the <strong>Orang Laut</strong>, meaning “sea people”, who lived around the waters of Southeast Asia.
+      </p>
+
+      <p>
+        Before becoming a British trading port, Singapore was linked to Malay kingdoms and maritime empires such as Srivijaya, Majapahit and later the Johor Sultanate.
+      </p>
+    </div>
+  </section>
+
+  <!-- HISTORY -->
+  <section>
+    <span class="tag">History</span>
+    <h2>From Temasek to Global City</h2>
+
+    <div class="card">
+      <p>
+        Singapore's history is much older than its independence date. The modern country is young, but the island has been part of Southeast Asian trade routes for centuries.
+      </p>
+
+      <div class="timeline" style="margin-top:25px;">
+
+        <div class="timeline-event">
+          <div class="timeline-time">13th Century – 1819</div>
+          <div class="timeline-title">Temasek & The Malay World</div>
+          <p>
+            Singapore was known as Temasek and was part of regional Malay trading networks. Small communities of Malays and Orang Laut lived around the island, and it was linked to larger maritime powers such as Srivijaya, Majapahit and the Johor Sultanate.
+          </p>
+        </div>
+
+        <div class="timeline-event">
+          <div class="timeline-time">1819 – 1942</div>
+          <div class="timeline-title">British Singapore</div>
+          <p>
+            Sir Stamford Raffles established Singapore as a British trading post in 1819. Its location between India, China and Southeast Asia made it perfect for trade, and it quickly became one of the busiest ports in the region.
+          </p>
+        </div>
+
+        <div class="timeline-event">
+          <div class="timeline-time">1942 – 1945</div>
+          <div class="timeline-title">Japanese Occupation</div>
+          <p>
+            During World War II, Singapore was occupied by Japan. This was one of the darkest periods in the island's history and deeply changed how locals viewed British power.
+          </p>
+        </div>
+
+        <div class="timeline-event">
+          <div class="timeline-time">1945 – 1963</div>
+          <div class="timeline-title">Return to British Rule</div>
+          <p>
+            After Japan's defeat, Singapore returned to British administration. Nationalist movements grew, and Singapore gained internal self-government in 1959.
+          </p>
+        </div>
+
+        <div class="timeline-event">
+          <div class="timeline-time">1963 – 1965</div>
+          <div class="timeline-title">Part of Malaysia</div>
+          <p>
+            Singapore joined the Federation of Malaysia together with Malaya, Sabah and Sarawak. The idea was to create a stronger regional country, but political and ethnic tensions quickly became serious.
+          </p>
+        </div>
+
+        <div class="timeline-event">
+          <div class="timeline-time">1965 – Present</div>
+          <div class="timeline-title">Independent Singapore</div>
+          <p>
+            On 9 August 1965, Singapore separated from Malaysia and became independent. It had almost no natural resources, limited land and an uncertain future, but transformed itself into one of the richest countries in the world.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CULTURE -->
+  <section>
+    <span class="tag">Culture</span>
+    <h2>Is there Singaporean culture?</h2>
+
+    <div class="card">
+      <p>
+        Yes. Singapore has a real culture, but it is not based on one single ancient ethnic group. It is a modern national identity created from many communities living together.
+      </p>
+
+      <p>
+        Singaporeans can have Chinese, Malay, Indian, Eurasian or mixed ancestry, but still strongly identify as Singaporean. This multicultural mix is visible everywhere: in the food, language, religion, festivals, neighbourhoods and daily life.
+      </p>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Chinese Influence</h3>
+          <p>
+            The largest community in Singapore is ethnic Chinese. Chinese influence can be seen in temples, festivals, Mandarin, Hokkien and Cantonese roots, noodles, dumplings and business networks.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h3>Malay Influence</h3>
+          <p>
+            Malay is the national language, and Malay culture is visible in food, music, traditions and neighbourhoods like Kampong Glam.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Indian Influence</h3>
+          <p>
+            Tamil is an official language, and Little India is one of the most colourful areas of Singapore, filled with temples, markets, spices and Indian restaurants.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h3>British Influence</h3>
+          <p>
+            English, law, administration, schools, colonial buildings and many institutions were shaped by the British period.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LANGUAGE -->
+  <section>
+    <span class="tag">Language</span>
+    <h2>Why does everyone speak English?</h2>
+
+    <div class="card">
+      <p>
+        English became important because Singapore was a British colony for many years. But after independence, English became even more useful because the country was so multicultural.
+      </p>
+
+      <p>
+        Instead of choosing Chinese, Malay or Tamil as the main working language, Singapore chose <strong>English</strong> as a neutral common language. This helped different communities communicate with each other and made Singapore attractive for global business.
+      </p>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Four Official Languages</h3>
+          <p>
+            Singapore has four official languages: English, Mandarin Chinese, Malay and Tamil. Malay is the national language, but English is the main language of school, business and government.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h3>Singlish</h3>
+          <p>
+            Locals also speak Singlish, a very Singaporean version of English mixed with Chinese dialects, Malay and Tamil expressions. A classic phrase is <strong>“Can lah!”</strong>, meaning something like “Yes, it is possible!”
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ECONOMY -->
+  <section>
+    <span class="tag">Economy</span>
+    <h2>How does Singapore make money?</h2>
+
+    <div class="card">
+      <p>
+        Singapore has almost no natural resources, so it became rich by becoming extremely useful to the world. Its biggest economic power comes from <strong>services</strong>, not agriculture.
+      </p>
+
+      <p>
+        Services make up the largest part of Singapore's economy. This includes banking, insurance, shipping, logistics, tourism, aviation, technology, business services and international trade.
+      </p>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Finance & Banking</h3>
+          <p>
+            Singapore is one of Asia's biggest financial centres, especially for banking, investment, insurance and wealth management.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h3>Shipping & Logistics</h3>
+          <p>
+            Its port is one of the busiest in the world because Singapore sits on a key route between the Indian Ocean and the Pacific.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Aviation & Tourism</h3>
+          <p>
+            Changi Airport connects Asia with Europe, Australia and the rest of the world. Marina Bay Sands, Gardens by the Bay and Sentosa attract millions of visitors.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h3>Technology & Headquarters</h3>
+          <p>
+            Many global companies use Singapore as their Southeast Asian headquarters because it is stable, English-speaking and business-friendly.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPORTS -->
+  <section>
+    <span class="tag">Trade</span>
+    <h2>What does Singapore export?</h2>
+
+    <div class="card">
+      <p>
+        Singapore exports much more than people expect for such a tiny country. Some exports are made locally, while others pass through Singapore because it is a giant trading and logistics hub.
+      </p>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Electronics</h3>
+          <p>
+            Semiconductors, integrated circuits and high-tech components are among Singapore's most important goods exports.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h3>Petroleum Products</h3>
+          <p>
+            Singapore has no large oil fields of its own, but it is a major oil refining and trading hub.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Chemicals & Pharmaceuticals</h3>
+          <p>
+            Petrochemicals, specialty chemicals, medicines and biomedical products are major parts of Singapore's advanced manufacturing sector.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h3>Services</h3>
+          <p>
+            Singapore also exports finance, insurance, logistics, consulting, digital services and other high-value professional services.
+          </p>
+        </div>
+      </div>
+
+      <p style="margin-top:20px;">
+        This is the secret of Singapore: it does not need to be large to be powerful. It became a place where money, goods, ships, planes, people and data all pass through.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOD -->
+  <section>
+    <span class="tag">Food</span>
+    <h2>The Hawker Centre Nation</h2>
+
+    <div class="card">
+      <p>
+        Food is one of the best ways to understand Singapore. Hawker centres are open-air food courts where you can eat dishes from Chinese, Malay, Indian and Peranakan traditions in one place.
+      </p>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Chicken Rice</h3>
+          <p>
+            Hainanese chicken rice is one of Singapore's most famous dishes: simple, comforting and taken very seriously by locals.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h3>Laksa</h3>
+          <p>
+            A spicy coconut noodle soup that shows the beautiful mix of Chinese and Malay food traditions.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Chili Crab</h3>
+          <p>
+            Messy, expensive and iconic. One of the most famous dishes to try in Singapore.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h3>Kaya Toast</h3>
+          <p>
+            A classic breakfast of toast with coconut jam, usually eaten with soft-boiled eggs and kopi.
+          </p>
+        </div>
+      </div>
+
+      <p style="margin-top:20px;">
+        Singapore's hawker culture is so important that it is recognised by UNESCO as intangible cultural heritage.
+      </p>
+    </div>
+  </section>
+
+  <!-- FUN FACTS -->
+  <section>
+    <span class="tag">Fun Facts</span>
+    <h2>Things that surprise visitors</h2>
+
+    <div class="card">
+      <ul>
+        <li>Singapore is a city, an island and a country at the same time.</li>
+        <li>It became independent only in 1965, making it younger than many living grandparents.</li>
+        <li>It was once expelled from Malaysia and had to survive alone.</li>
+        <li>More than 80% of residents live in public housing built by the government.</li>
+        <li>It has one of the best airports in the world: Changi Airport.</li>
+        <li>It is one of the safest countries in the world.</li>
+        <li>Chewing gum is famously restricted.</li>
+        <li>It is called the “Garden City” because of its parks, trees and urban greenery.</li>
+        <li>Despite being tiny, it is one of the world's most important finance and shipping hubs.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PLACES -->
+  <section>
+    <span class="tag">Journey</span>
+    <h2>Places We Visited</h2>
+
+    <div class="cities">
+      <a class="city" href="Singapore/singapore.html">Singapore</a>
+    </div>
+  </section>
+
+  <a class="back" href="../../index.html">← Back to Home</a>
+
+</div>
+
+</body>
+</html>

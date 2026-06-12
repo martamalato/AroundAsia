@@ -1,62 +1,812 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Malaysia | Around Asia</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malaysia | Around Asia</title>
 
-  <style>
-    body{
-      font-family: Inter, sans-serif;
-      max-width: 900px;
-      margin: auto;
-      padding: 40px;
-      background: #f7f3ed;
-    }
+<style>
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  background: #f7f3ed;
+  color: #222;
+  line-height: 1.6;
+}
 
-    h1{
-      color: #486b5d;
-      margin-bottom: 20px;
-    }
+/* HERO */
+.hero {
+  height: 45vh;
+  background: url("malaysia.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+  color: white;
+  position: relative;
+}
 
-    a{
-      display: block;
-      padding: 15px;
-      margin: 10px 0;
-      background: white;
-      text-decoration: none;
-      color: #486b5d;
-      border-radius: 10px;
-      font-weight: 600;
-      transition: 0.2s;
-    }
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+}
 
-    a:hover{
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
+.hero h1 {
+  font-size: 52px;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
 
-    .back{
-      margin-top: 30px;
-      display: inline-block;
-      font-weight: 600;
-      color: #486b5d;
-      text-decoration: none;
-    }
-  </style>
+/* CONTAINER */
+.container {
+  max-width: 1050px;
+  margin: auto;
+  padding: 50px 25px;
+}
+
+/* SECTIONS */
+section {
+  margin-bottom: 60px;
+}
+
+h2 {
+  color: #486b5d;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 16px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  margin-bottom: 25px;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  background: #486b5d;
+  color: white;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* STATS GRID */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.stat-box {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  border-top: 3px solid #486b5d;
+}
+
+.stat-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #777;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+}
+
+.stat-sub {
+  font-size: 13px;
+  color: #555;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+/* FEATURE ROWS */
+.feature-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.feature-block {
+  background: #fbf9f6;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #486b5d;
+}
+
+.feature-block h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #486b5d;
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  border-left: 2px solid #eae4da;
+}
+
+.timeline-event {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-event::before {
+  content: "";
+  position: absolute;
+  left: -37px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #486b5d;
+  border: 4px solid white;
+}
+
+.timeline-time {
+  font-weight: 700;
+  color: #486b5d;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.timeline-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+/* LISTS */
+ul {
+  padding-left: 20px;
+  margin: 10px 0 0 0;
+}
+
+li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* CITIES */
+.cities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.city {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid transparent;
+}
+
+.city::after {
+  content: "→";
+  color: #486b5d;
+  transition: transform 0.2s;
+}
+
+.city:hover {
+  border-color: #486b5d;
+  color: #486b5d;
+  background: #fbf9f6;
+  transform: translateY(-2px);
+}
+
+.city:hover::after {
+  transform: translateX(4px);
+}
+
+.back {
+  display: inline-block;
+  margin-top: 30px;
+  color: #486b5d;
+  font-weight: 600;
+  text-decoration: none;
+}
+</style>
 </head>
 
 <body>
 
-<h1>Malaysia</h1>
+<div class="hero">
+  <h1>Malaysia</h1>
+</div>
 
-<a href="Kuala Lumpur/kualalumpur.html">Kuala Lumpur</a>
-<a href="Langkawi/langkawi.html">Langkawi</a>
-<a href="Penang/penang.html">Penang</a>
+<div class="container">
 
-<br>
+  <!-- OVERVIEW -->
+  <section>
+    <span class="tag">Overview</span>
+    <h2>Where Malay, Chinese, Indian, Islamic, colonial and jungle worlds meet</h2>
 
-<a class="back" href="../../index.html">← Back to Home</a>
+    <div class="card">
+      <p>
+        Malaysia is one of the most culturally layered countries in Southeast Asia. It is not just one landmass, but two very different regions separated by the South China Sea: Peninsular Malaysia, connected to Thailand and Singapore, and East Malaysia on the island of Borneo.
+      </p>
+
+      <p>
+        What makes Malaysia fascinating is its mix: Malay sultanates, Chinese trading communities, Indian migration, Islamic identity, Portuguese and Dutch traces in Melaka, British colonial cities, tropical islands, ancient rainforests, orangutans, oil wealth, palm oil, electronics and some of the best food in Asia.
+      </p>
+
+      <p>
+        Malaysia feels like a bridge between worlds: Muslim but multicultural, tropical but industrialised, modern but still deeply connected to royal traditions, rainforest landscapes and old trading routes.
+      </p>
+    </div>
+  </section>
+
+  <!-- KEY FACTS -->
+  <section>
+    <span class="tag">Numbers</span>
+    <h2>Key Facts & Demographics</h2>
+
+    <div class="stats-grid">
+
+      <div class="stat-box">
+        <div class="stat-label">Population & Scale</div>
+        <div class="stat-value">~34M</div>
+        <div class="stat-sub">
+          Malaysia has around 34 million people and covers about 330,000 km² across Peninsular Malaysia and Borneo.
+        </div>
+      </div>
+
+      <div class="stat-box">
+        <div class="stat-label">Capital & Power Hub</div>
+        <div class="stat-value">Kuala Lumpur</div>
+        <div class="stat-sub">
+          Kuala Lumpur is the largest city and economic centre, while nearby Putrajaya is the administrative capital.
+        </div>
+      </div>
+
+      <div class="stat-box">
+        <div class="stat-label">Currency</div>
+        <div class="stat-value">€1 ≈ RM5.1</div>
+        <div class="stat-sub">
+          Malaysia uses the Malaysian Ringgit (MYR). A local meal can often cost RM8–20, around €1.60–€4.
+        </div>
+      </div>
+
+      <div class="stat-box">
+        <div class="stat-label">Political System</div>
+        <div class="stat-value">Federal Monarchy</div>
+        <div class="stat-sub">
+          Malaysia has 13 states, 3 federal territories and a unique rotating king chosen from Malay royal families.
+        </div>
+      </div>
+
+      <div class="stat-box">
+        <div class="stat-label">Main Religion</div>
+        <div class="stat-value">Islam</div>
+        <div class="stat-sub">
+          Islam is the official religion, but Malaysia is also home to large Buddhist, Hindu, Christian and traditional communities.
+        </div>
+      </div>
+
+      <div class="stat-box">
+        <div class="stat-label">Economic Engine</div>
+        <div class="stat-value">Services + Industry</div>
+        <div class="stat-sub">
+          Services are the largest part of the economy, while electronics, oil, gas, palm oil and tourism are major pillars.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GEOGRAPHY -->
+  <section>
+    <span class="tag">Geography</span>
+    <h2>A country split in two by the sea</h2>
+
+    <div class="card">
+      <p>
+        Malaysia is unusual because it is divided into two main regions separated by hundreds of kilometres of sea. Peninsular Malaysia contains Kuala Lumpur, Penang, Langkawi and most of the population. East Malaysia, on Borneo, is home to Sabah and Sarawak, with huge rainforests, mountains and wildlife.
+      </p>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Peninsular Malaysia</h3>
+          <p>
+            This is the more urbanised and densely populated side, with Kuala Lumpur, Malacca, Penang, Langkawi and the border with Thailand and Singapore.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h3>Malaysian Borneo</h3>
+          <p>
+            Sabah and Sarawak are famous for rainforests, caves, orangutans, indigenous groups and Mount Kinabalu, one of Southeast Asia's highest peaks.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Strategic Strait</h3>
+          <p>
+            Malaysia sits beside the Strait of Malacca, one of the world's most important shipping routes, connecting the Indian Ocean with the South China Sea.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h3>Tropical Diversity</h3>
+          <p>
+            The country combines islands, jungles, highlands, mangroves, megacities and coral reefs, making it one of Southeast Asia's most geographically diverse countries.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTORY -->
+  <section>
+    <span class="tag">History</span>
+    <h2>From spice empires to modern Malaysia</h2>
+
+    <div class="card">
+      <p>
+        Malaysia's history is shaped by trade. Its location made it attractive to Malay sultanates, Chinese merchants, Indian traders, Islamic scholars and European empires.
+      </p>
+
+      <div class="timeline" style="margin-top:25px;">
+
+        <div class="timeline-event">
+          <div class="timeline-time">Before 1400s</div>
+          <div class="timeline-title">Malay Kingdoms & Indian Ocean Trade</div>
+          <p>
+            Long before European colonisation, the Malay Peninsula was part of powerful maritime trade networks linking India, China, Arabia and Southeast Asia. Hindu-Buddhist influences arrived through trade before Islam became dominant.
+          </p>
+        </div>
+
+        <div class="timeline-event">
+          <div class="timeline-time">1400s</div>
+          <div class="timeline-title">The Malacca Sultanate</div>
+          <p>
+            Malacca became one of the most important ports in Asia. Islam spread strongly through trade, and the city became a major centre for Malay culture, language, politics and commerce.
+          </p>
+        </div>
+
+        <div class="timeline-event">
+          <div class="timeline-time">1511 – 1641</div>
+          <div class="timeline-title">Portuguese Malacca</div>
+          <p>
+            The Portuguese captured Malacca in 1511, making it one of Portugal's most important Asian possessions. They built forts, churches and trading networks, and left traces in food, architecture, Catholic communities and the small Kristang Portuguese-Malay creole culture.
+          </p>
+        </div>
+
+        <div class="timeline-event">
+          <div class="timeline-time">1641 – 1824</div>
+          <div class="timeline-title">Dutch Control</div>
+          <p>
+            The Dutch took Malacca from the Portuguese in 1641. Dutch influence was more commercial than cultural, but it left visible traces in Melaka's red colonial buildings and town planning.
+          </p>
+        </div>
+
+        <div class="timeline-event">
+          <div class="timeline-time">1786 – 1957</div>
+          <div class="timeline-title">British Malaya</div>
+          <p>
+            The British gained Penang in 1786 and later expanded control across Malaya. They developed ports, tin mines, rubber plantations and railways, bringing large numbers of Chinese and Indian workers. This deeply shaped Malaysia's modern multicultural society.
+          </p>
+        </div>
+
+        <div class="timeline-event">
+          <div class="timeline-time">1941 – 1945</div>
+          <div class="timeline-title">Japanese Occupation</div>
+          <p>
+            During World War II, Japan occupied Malaya and Borneo. The occupation weakened British prestige and intensified nationalist movements across the region.
+          </p>
+        </div>
+
+        <div class="timeline-event">
+          <div class="timeline-time">1957</div>
+          <div class="timeline-title">Independence of Malaya</div>
+          <p>
+            The Federation of Malaya became independent from Britain on 31 August 1957, led by Tunku Abdul Rahman.
+          </p>
+        </div>
+
+        <div class="timeline-event">
+          <div class="timeline-time">1963</div>
+          <div class="timeline-title">Malaysia Is Born</div>
+          <p>
+            Malaysia was formed when Malaya joined with Sabah, Sarawak and Singapore. This created a larger federation linking the peninsula with Borneo.
+          </p>
+        </div>
+
+        <div class="timeline-event">
+          <div class="timeline-time">1965</div>
+          <div class="timeline-title">Singapore Leaves Malaysia</div>
+          <p>
+            Political and ethnic tensions led Singapore to separate from Malaysia. Since then, Malaysia and Singapore have remained independent neighbours with close economic ties and occasional political disagreements.
+          </p>
+        </div>
+
+        <div class="timeline-event">
+          <div class="timeline-time">1970s – Present</div>
+          <div class="timeline-title">Industrialisation & Modern Malaysia</div>
+          <p>
+            Malaysia grew from a commodity-based economy into one of Southeast Asia's major manufacturing, services and electronics hubs.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CULTURE -->
+  <section>
+    <span class="tag">Culture</span>
+    <h2>Malaysia's multicultural identity</h2>
+
+    <div class="card">
+      <p>
+        Malaysia is often described as “Truly Asia” because many Asian cultures live side by side. Its identity is mainly shaped by Malay, Chinese, Indian, indigenous, Islamic and colonial influences.
+      </p>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Malay Culture</h3>
+          <p>
+            Malays are the largest ethnic group and Islam is central to Malay identity. Malay language, royal traditions, batik, kampung life, mosques and festivals like Hari Raya strongly shape national culture.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h3>Chinese Culture</h3>
+          <p>
+            Chinese Malaysians have played a huge role in trade, cities, food and business. Penang and Kuala Lumpur show strong Chinese influence through temples, clan houses, hawker food and festivals like Chinese New Year.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Indian Culture</h3>
+          <p>
+            Indian Malaysians, many with Tamil roots, arrived especially during British rule to work in plantations and railways. Their influence is visible in Hindu temples, banana leaf rice, roti canai, curry houses and Deepavali.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h3>Indigenous Peoples</h3>
+          <p>
+            Malaysia is also home to Orang Asli communities in the peninsula and many indigenous groups in Borneo, including Iban, Kadazan-Dusun and Dayak peoples, each with distinct languages and traditions.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Portuguese Legacy</h3>
+          <p>
+            In Melaka, Portuguese influence survives in churches, fort ruins, Catholic traditions and the Kristang community, who speak a Portuguese-based creole mixed with Malay.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h3>British Legacy</h3>
+          <p>
+            British rule shaped Malaysia's legal system, education, railways, plantation economy, English usage and colonial architecture in cities like Kuala Lumpur, Penang and Ipoh.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LANGUAGE AND RELIGION -->
+  <section>
+    <span class="tag">Language & Religion</span>
+    <h2>Many languages, many faiths</h2>
+
+    <div class="card">
+      <p>
+        Malaysia's official language is Malay, but English is widely used in business, tourism and cities. Many Malaysians are multilingual, switching between Malay, English, Mandarin, Cantonese, Hokkien, Tamil and local languages.
+      </p>
+
+      <p>
+        Religion is also part of Malaysia's identity. Islam is the official religion of the federation, while Buddhism, Christianity, Hinduism, Taoism and Indigenous beliefs are practised openly in the country's multicultural society.
+      </p>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Bahasa Malaysia</h3>
+          <p>
+            Malay, officially Bahasa Malaysia, is the national language and one of the easiest Asian languages for foreigners to start learning because it has no tones and uses the Latin alphabet.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h3>English</h3>
+          <p>
+            English remains important because of British colonial history and Malaysia's role in global trade, tourism and higher education.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Islam in Malaysia</h3>
+          <p>
+            Islam is the official religion and is practised by most ethnic Malays. It influences public holidays, mosque architecture, halal food culture and Islamic family and inheritance laws for Muslims.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h3>Religious mix</h3>
+          <p>
+            Around 60% of the population is Muslim, with large Buddhist and Christian communities, Hindu minorities and many Chinese folk religions or Indigenous spiritual traditions.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Festivals</h3>
+          <p>
+            Malaysia celebrates many religious festivals, including Hari Raya Aidilfitri, Chinese New Year, Deepavali, Wesak, Christmas and Gawai in East Malaysia.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h3>Faith and daily life</h3>
+          <p>
+            Mosques, temples, churches and community halls are part of everyday life, and many cities show this harmony in neighbourhoods where different faiths live side by side.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GEOPOLITICS -->
+  <section>
+    <span class="tag">Geopolitics</span>
+    <h2>Small country? Not exactly. Strategic country? Absolutely.</h2>
+
+    <div class="card">
+      <p>
+        Malaysia is geopolitically important because of its location. It sits beside the Strait of Malacca, one of the busiest shipping routes on Earth, and it also has coastline facing the South China Sea.
+      </p>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Strait of Malacca</h3>
+          <p>
+            This narrow sea route is one of the world's most important trade corridors. Oil, electronics, food, raw materials and manufactured goods pass through it every day.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h3>South China Sea</h3>
+          <p>
+            Malaysia has claims in parts of the South China Sea, where China, Vietnam, the Philippines, Brunei and Taiwan also have overlapping claims. This makes the region strategically sensitive.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Between China & The West</h3>
+          <p>
+            Malaysia often tries to balance relations with China, the United States, ASEAN neighbours and Muslim-majority countries. It prefers a pragmatic foreign policy focused on trade and stability.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h3>Singapore Relationship</h3>
+          <p>
+            Malaysia and Singapore share deep economic ties, but also occasional tensions over water, borders, transport links and competition as regional hubs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ECONOMY -->
+  <section>
+    <span class="tag">Economy</span>
+    <h2>From rubber and tin to electronics and services</h2>
+
+    <div class="card">
+      <p>
+        Malaysia's economy used to depend heavily on tin, rubber, palm oil and natural resources. Today, it is far more diversified. Services make up the largest share of GDP, while manufacturing remains very important, especially electronics and semiconductors.
+      </p>
+
+      <p>
+        Recent growth has been supported by domestic demand, tourism, exports, infrastructure, renewable energy and digital investment. The services sector is the biggest part of the economy, while manufacturing and construction remain important growth drivers.
+      </p>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Services</h3>
+          <p>
+            Finance, retail, tourism, logistics, telecommunications, education and business services are the largest part of Malaysia's economy.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h3>Electronics</h3>
+          <p>
+            Malaysia is a major electronics and semiconductor hub, especially for assembly, testing and export of electronic components.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Oil, Gas & Palm Oil</h3>
+          <p>
+            Malaysia is an important producer of oil, gas and palm oil. Palm oil is controversial because of deforestation, but it remains economically important.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h3>Tourism</h3>
+          <p>
+            Islands, food, rainforests, colonial towns and shopping make tourism a major part of the economy, especially in Kuala Lumpur, Penang, Langkawi, Sabah and Sarawak.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPORTS -->
+  <section>
+    <span class="tag">Trade</span>
+    <h2>What does Malaysia export?</h2>
+
+    <div class="card">
+      <p>
+        Malaysia is one of Southeast Asia's major exporting economies. Its exports combine high-tech manufacturing with natural resources and agricultural commodities.
+      </p>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Electronics & Semiconductors</h3>
+          <p>
+            Electrical and electronic products are Malaysia's most important export category, including semiconductors, integrated circuits and electronic components.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h3>Oil & Gas</h3>
+          <p>
+            Petroleum, liquefied natural gas and refined fuels are major exports, especially through Malaysia's energy sector.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Palm Oil</h3>
+          <p>
+            Malaysia is one of the world's largest palm oil producers and exporters, supplying food, cosmetics, biofuel and industrial markets.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h3>Rubber & Medical Gloves</h3>
+          <p>
+            Malaysia has long been linked to rubber production and became especially important in the global medical glove industry.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOD -->
+  <section>
+    <span class="tag">Food</span>
+    <h2>One of Asia's greatest food countries</h2>
+
+    <div class="card">
+      <p>
+        Malaysian food is a perfect example of the country's multicultural identity. Malay, Chinese, Indian, Peranakan, Portuguese, Thai and Indonesian influences all mix together.
+      </p>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Nasi Lemak</h3>
+          <p>
+            Often considered Malaysia's national dish: coconut rice with sambal, anchovies, peanuts, cucumber and egg.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h3>Roti Canai</h3>
+          <p>
+            A flaky Indian-influenced flatbread usually eaten with curry. Cheap, delicious and found almost everywhere.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Char Kway Teow</h3>
+          <p>
+            A smoky stir-fried noodle dish strongly associated with Penang's Chinese food culture.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h3>Laksa</h3>
+          <p>
+            A spicy noodle soup with many regional styles, including Penang assam laksa and coconut-based curry laksa.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUN FACTS -->
+  <section>
+    <span class="tag">Fun Facts</span>
+    <h2>Things that surprise visitors</h2>
+
+    <div class="card">
+      <ul>
+        <li>Malaysia is split into two regions separated by the South China Sea.</li>
+        <li>It has one of the world's oldest rainforests, older than the Amazon in some areas.</li>
+        <li>The king of Malaysia rotates between several Malay royal families.</li>
+        <li>Melaka still has traces of Portuguese, Dutch and British rule.</li>
+        <li>Penang is often considered one of the best street-food destinations in Asia.</li>
+        <li>Malaysia is one of the world's key palm oil producers.</li>
+        <li>Kuala Lumpur grew from a muddy tin-mining settlement into a major skyscraper city.</li>
+        <li>Malaysia has both modern megacities and wild orangutan habitats.</li>
+        <li>The Petronas Towers were once the tallest buildings in the world.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PLACES -->
+  <section>
+    <span class="tag">Journey</span>
+    <h2>Places We Visited</h2>
+
+    <div class="cities">
+      <a class="city" href="Kuala Lumpur/kualalumpur.html">Kuala Lumpur</a>
+      <a class="city" href="Langkawi/langkawi.html">Langkawi</a>
+      <a class="city" href="Penang/penang.html">Penang</a>
+    </div>
+  </section>
+
+  <a class="back" href="../../index.html">← Back to Home</a>
+
+</div>
 
 </body>
 </html>

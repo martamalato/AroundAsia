@@ -1,65 +1,625 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Taiwan | Around Asia</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taiwan | Around Asia</title>
 
-  <style>
-    body{
-      font-family: Inter, sans-serif;
-      max-width: 900px;
-      margin: auto;
-      padding: 40px;
-      background: #f7f3ed;
-    }
+<style>
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  background: #f7f3ed;
+  color: #222;
+  line-height: 1.6;
+}
 
-    h1{
-      color: #486b5d;
-      margin-bottom: 20px;
-    }
+/* HERO */
+.hero {
+  height: 45vh;
+  background: url("taiwan.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+  color: white;
+  position: relative;
+}
 
-    a{
-      display: block;
-      padding: 15px;
-      margin: 10px 0;
-      background: white;
-      text-decoration: none;
-      color: #486b5d;
-      border-radius: 10px;
-      font-weight: 600;
-      transition: 0.2s;
-    }
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.68), transparent);
+}
 
-    a:hover{
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
+.hero h1 {
+  font-size: 52px;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
 
-    .back{
-      margin-top: 30px;
-      display: inline-block;
-      font-weight: 600;
-      color: #486b5d;
-      text-decoration: none;
-    }
-  </style>
+/* CONTAINER */
+.container {
+  max-width: 1050px;
+  margin: auto;
+  padding: 50px 25px;
+}
+
+/* SECTIONS */
+section {
+  margin-bottom: 60px;
+}
+
+h2 {
+  color: #486b5d;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 16px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* CARDS */
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  margin-bottom: 25px;
+}
+
+.card:last-child {
+  margin-bottom: 0;
+}
+
+/* TAGS */
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  background: #486b5d;
+  color: white;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* STATS GRID */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.stat-box {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  border-top: 3px solid #486b5d;
+}
+
+.stat-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #777;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+}
+
+.stat-sub {
+  font-size: 13px;
+  color: #555;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+/* MULTI-COLUMN ROWS */
+.feature-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.feature-block {
+  background: #fbf9f6;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #486b5d;
+}
+
+.feature-block h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #486b5d;
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  border-left: 2px solid #eae4da;
+}
+
+.timeline-event {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-event:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-event::before {
+  content: "";
+  position: absolute;
+  left: -37px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #486b5d;
+  border: 4px solid white;
+}
+
+.timeline-time {
+  font-weight: 700;
+  color: #486b5d;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.timeline-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+/* BULLET LIST STYLING */
+ul {
+  padding-left: 20px;
+  margin: 10px 0 0 0;
+}
+
+li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* CITIES GRID */
+.cities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.city {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid transparent;
+}
+
+.city::after {
+  content: "→";
+  color: #486b5d;
+  transition: transform 0.2s;
+}
+
+.city:hover {
+  border-color: #486b5d;
+  color: #486b5d;
+  background: #fbf9f6;
+  transform: translateY(-2px);
+}
+
+.city:hover::after {
+  transform: translateX(4px);
+}
+
+.note {
+  font-size: 13px;
+  color: #666;
+  background: #fbf9f6;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border-left: 4px solid #486b5d;
+  margin-top: 18px;
+}
+</style>
 </head>
 
 <body>
 
-<h1>Taiwan</h1>
+<div class="hero">
+  <h1>Taiwan</h1>
+</div>
 
-<a href="Taipe/taipe.html">Taipei</a>
-<a href="Tainan/tainan.html">Tainan</a>
-<a href="Kenting/kenting.html">Kenting</a>
-<a href="Dulan/dulan.html">Dulan</a>
-<a href="Taroko Park/taroko.html">Taroko Park</a>
-<a href="Taipinshan/taipingshan.html">Taipingshan</a>
+<div class="container">
 
-<br>
+  <!-- OVERVIEW -->
+  <section>
+    <span class="tag">Overview</span>
+    <h2>The tiny island that quietly powers the modern world</h2>
+    <div class="card">
+      <p>
+        Taiwan is small on the map, but enormous in global importance. It is a tropical-mountain island of night markets, bubble tea, high-speed trains, misty tea plantations, dramatic marble gorges, indigenous cultures, scooters, temples, Japanese-era buildings, and some of the most advanced technology on Earth.
+      </p>
+      <p>
+        What makes Taiwan so fascinating is the contrast: one moment you are eating stinky tofu under neon lights in Taipei, and a few hours later you can be above the clouds in alpine forests. At the same time, Taiwan sits at the center of one of the world’s biggest geopolitical tensions, because China considers it part of China while Taiwan has its own elected government, military, currency, passport, and democratic society.
+      </p>
+      <p>
+        Taiwan is often described through two powerful ideas: the <strong>“Silicon Shield”</strong>, because its semiconductor industry is so important that the world has a huge reason to care about its safety, and the <strong>“status quo”</strong>, because many Taiwanese people do not want war or sudden change, but simply want to keep living as they do now.
+      </p>
+    </div>
+  </section>
 
-<a class="back" href="../../index.html">← Back to Home</a>
+  <!-- KEY FACTS -->
+  <section>
+    <span class="tag">Numbers</span>
+    <h2>Key Facts & Demographics</h2>
+    <div class="stats-grid">
+      <div class="stat-box">
+        <div class="stat-label">Population</div>
+        <div class="stat-value">~23.4M</div>
+        <div class="stat-sub">A dense island society, with most people living on the flatter western coast.</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">Area</div>
+        <div class="stat-value">~36,000 km²</div>
+        <div class="stat-sub">Smaller than the Netherlands, but packed with mountains, cities, beaches and forests.</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">Mountains</div>
+        <div class="stat-value">~70%</div>
+        <div class="stat-sub">Much of Taiwan is mountainous, which pushes cities and farms toward the coast and western plains.</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">Semiconductors</div>
+        <div class="stat-value">20%+ GDP</div>
+        <div class="stat-sub">The chip industry is one of Taiwan’s strongest economic engines.</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">Advanced Chips</div>
+        <div class="stat-value">90%+</div>
+        <div class="stat-sub">Taiwan makes the majority of the world’s most advanced chips.</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">Capital</div>
+        <div class="stat-value">Taipei</div>
+        <div class="stat-sub">A city of night markets, mountains, hot springs, Michelin food and convenience stores.</div>
+      </div>
+      <div class="stat-box">
+  <div class="stat-label">Currency</div>
+  <div class="stat-value">€1 = NT$35</div>
+  <div class="stat-sub">
+    Taiwan uses the New Taiwan Dollar (TWD). 
+    As a rule of thumb, €1 buys roughly NT$35, making quick price conversions easy while travelling.
+  </div>
+</div>
+    </div>
+  </section>
+
+  <!-- GEOGRAPHY -->
+  <section>
+    <span class="tag">Geography</span>
+    <h2>A mountain island where people live between sea and peaks</h2>
+    <div class="card">
+      <p>
+        Taiwan is not just an urban island. It is a dramatic tectonic island created by the collision of the Eurasian Plate and the Philippine Sea Plate. This pressure lifted huge mountain ranges from the ocean, creating one of the most vertical landscapes in Asia.
+      </p>
+      <p>
+        The result is spectacular: the east coast is wild, steep and carved by cliffs, while the west coast is flatter and much more populated. This is why most big cities, transport routes and industries developed along the western plains.
+      </p>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Mountains Everywhere</h3>
+          <p>Taiwan has more than 260 peaks above 3,000 meters. Its highest mountain, <strong>Yushan / Jade Mountain</strong>, rises to 3,952 meters, higher than Mount Fuji. For such a small island, the altitude change is insane.</p>
+        </div>
+        <div class="feature-block">
+          <h3>People on the Coast</h3>
+          <p>Because the middle and east of the island are steep and rugged, most people live on the coast and western plains. The mountains make Taiwan beautiful, but they also limit where people can build cities.</p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Taroko Gorge</h3>
+          <p>One of Taiwan’s most famous natural wonders: a marble canyon carved by rivers and uplifted by tectonic forces. It feels like the island’s geology is showing off.</p>
+        </div>
+        <div class="feature-block">
+          <h3>Earthquakes & Typhoons</h3>
+          <p>Taiwan’s beauty comes with danger. The same plate movement that created its mountains also causes frequent earthquakes, while typhoons bring heavy rain, landslides and dramatic weather.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAILY LIFE -->
+  <section>
+    <span class="tag">Daily Life</span>
+    <h2>Night markets, scooters, bubble tea & convenience-store magic</h2>
+    <div class="card">
+      <p>
+        Taiwanese daily life is one of the easiest in Asia to fall in love with. It is organized, polite, food-obsessed, safe, and incredibly convenient. Cities feel modern, but still full of street stalls, temples, old neighborhoods and local rituals.
+      </p>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Night Market Culture</h3>
+          <p>Night markets are not just places to eat; they are evening playgrounds. Locals go for oyster omelets, beef noodle soup, fried chicken, sweet potato balls, pepper buns, bubble tea and the famous love-it-or-hate-it <strong>stinky tofu</strong>.</p>
+        </div>
+        <div class="feature-block">
+          <h3>Bubble Tea Was Born Here</h3>
+          <p>Taiwan gave the world bubble tea. What started as a local drink with tea, milk, sugar and chewy tapioca pearls became one of Asia’s biggest food exports.</p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Convenience Store Kingdom</h3>
+          <p>In Taiwan, convenience stores are almost like public service centers. You can buy food, pay bills, collect parcels, print documents, buy tickets, use ATMs and hide from the rain under one tiny roof.</p>
+        </div>
+        <div class="feature-block">
+          <h3>Scooter Island</h3>
+          <p>Scooters are everywhere because they are cheap, fast and perfect for dense streets. At traffic lights, they gather like colorful little armies waiting to launch.</p>
+        </div>
+      </div>
+
+      <h3 style="color: #486b5d; margin-top: 25px; margin-bottom: 10px; font-size: 20px;">Tiny Details That Make Taiwan Special:</h3>
+      <ul>
+        <li>Garbage trucks play music so people know when to bring out trash.</li>
+        <li>Taipei has hot springs inside the city area, especially around Beitou.</li>
+        <li>Taiwanese temples are colorful, smoky, loud and full of offerings.</li>
+        <li>Public transport is clean, efficient and easy to use.</li>
+        <li>Taiwan feels modern, but many traditions are still alive in everyday life.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ECONOMY -->
+  <section>
+    <span class="tag">Economy</span>
+    <h2>From factory island to semiconductor superpower</h2>
+    <div class="card">
+      <p>
+        Taiwan is one of the great economic success stories of Asia. After World War II, it moved from agriculture and low-cost manufacturing into electronics, engineering and high-tech exports. Together with South Korea, Singapore and Hong Kong, Taiwan became one of the famous <strong>Four Asian Tigers</strong>.
+      </p>
+      <p>
+        Today, Taiwan is especially powerful because of semiconductors: the tiny chips inside phones, laptops, cars, cameras, medical devices, AI servers and almost every modern machine. Taiwan’s semiconductor industry generated more than <strong>$165 billion</strong> in 2024 and represented around <strong>20.7% of GDP</strong>.
+      </p>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>TSMC: The Giant Behind the Screen</h3>
+          <p><strong>TSMC</strong> is the world’s most important chip manufacturer. Many companies design chips, but TSMC physically makes the most advanced ones. Apple, NVIDIA, AMD and many others depend on Taiwanese manufacturing.</p>
+        </div>
+        <div class="feature-block">
+          <h3>The Silicon Shield</h3>
+          <p>Because Taiwan makes over 60% of global foundry output and more than 90% of leading-edge chips, some analysts call this its “Silicon Shield”: the world has a strong incentive to prevent disruption on the island.</p>
+        </div>
+      </div>
+
+      <h3 style="color: #486b5d; margin-top: 25px; margin-bottom: 10px; font-size: 20px;">Key Growth Drivers:</h3>
+      <ul>
+        <li><strong>Semiconductors:</strong> Taiwan is central to the global supply chain for advanced chips.</li>
+        <li><strong>Electronics manufacturing:</strong> Laptops, servers, components and precision hardware.</li>
+        <li><strong>Export economy:</strong> Taiwan sells high-value technology to the world.</li>
+        <li><strong>Education & engineering:</strong> A skilled workforce supports high-tech industry.</li>
+        <li><strong>Democracy & stability:</strong> Strong institutions helped attract long-term investment.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- GEOPOLITICS -->
+  <section>
+    <span class="tag">Geopolitics</span>
+    <h2>The Taiwan–China question: one island, two very different stories</h2>
+    <div class="card">
+      <p>
+        Taiwan’s political situation is one of the most sensitive in the world. China considers Taiwan part of its territory and says reunification is a national goal. Taiwan, however, has governed itself for decades with its own elections, president, parliament, courts, military, currency and passport.
+      </p>
+      <p>
+        Most people in Taiwan do not want sudden conflict. Many support maintaining the current <strong>status quo</strong>: not declaring formal independence in a way that could trigger war, but also not accepting rule by Beijing. This creates a strange reality: Taiwan functions like a country in daily life, but its international status is heavily contested.
+      </p>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Why China Cares</h3>
+          <p>For Beijing, Taiwan is tied to nationalism, history and the idea of completing China’s territorial unity. Chinese leaders have not ruled out the use of force if they believe peaceful reunification is impossible.</p>
+        </div>
+        <div class="feature-block">
+          <h3>Why The World Cares</h3>
+          <p>A war around Taiwan would threaten global shipping, technology supply chains and regional security. It could involve the United States, affect Japan, and shock the global economy within days.</p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>The USA Bond</h3>
+          <p>The United States does not have formal diplomatic relations with Taiwan, but it maintains strong unofficial ties and sells defensive weapons under the Taiwan Relations Act. Washington’s policy is often described as <strong>strategic ambiguity</strong>: keeping China unsure about how the U.S. would respond to an attack.</p>
+        </div>
+        <div class="feature-block">
+          <h3>Japan’s Position</h3>
+          <p>Japan is geographically close and deeply affected by Taiwan’s security. Some Japanese islands are very near Taiwan, and a conflict could threaten Japanese territory, trade routes and U.S. bases in Japan.</p>
+        </div>
+      </div>
+
+      <p class="note">
+        Important nuance: it is not accurate to say China would definitely “first attack Japan.” A Taiwan conflict could involve Japan because of geography, U.S. bases and regional defense, but the exact sequence would depend on the crisis.
+      </p>
+    </div>
+  </section>
+
+  <!-- HISTORY -->
+  <section>
+    <span class="tag">History</span>
+    <h2>Indigenous roots, colonizers, civil war & democracy</h2>
+    <div class="card">
+      <p>
+        Taiwan’s history is layered and complicated. It was never just “Chinese” or just “Japanese” or just “Western influenced.” It is a place where indigenous Austronesian cultures, Chinese migration, European traders, Japanese colonial rule and Cold War politics all left marks.
+      </p>
+
+      <div class="timeline" style="margin-top: 25px;">
+        <div class="timeline-event">
+          <div class="timeline-time">Thousands of years ago</div>
+          <div class="timeline-title">Indigenous Austronesian Taiwan</div>
+          <p>Before large-scale Chinese migration, Taiwan was home to Austronesian peoples. Linguists believe Taiwan may be one of the original homelands of Austronesian languages, linked to peoples who later spread across the Philippines, Indonesia, Polynesia, Hawaii and New Zealand.</p>
+        </div>
+
+        <div class="timeline-event">
+          <div class="timeline-time">1600s</div>
+          <div class="timeline-title">Dutch, Spanish & Chinese Migration</div>
+          <p>European powers briefly established colonies and trading posts. At the same time, more settlers from Fujian and Guangdong crossed the Taiwan Strait, shaping the island’s Chinese-speaking communities.</p>
+        </div>
+
+        <div class="timeline-event">
+          <div class="timeline-time">1683 – 1895</div>
+          <div class="timeline-title">Qing Dynasty Rule</div>
+          <p>Taiwan became part of the Qing Empire, though imperial control was uneven, especially in mountainous and indigenous areas. The western plains became more settled and agricultural.</p>
+        </div>
+
+        <div class="timeline-event">
+          <div class="timeline-time">1895 – 1945</div>
+          <div class="timeline-title">Japanese Colonial Era</div>
+          <p>After the First Sino-Japanese War, Taiwan was ceded to Japan. Japan built railways, schools, roads, sanitation systems and industries. Many traces remain today, from old stations and hot spring towns to architecture and food culture.</p>
+        </div>
+
+        <div class="timeline-event">
+          <div class="timeline-time">1945 – 1949</div>
+          <div class="timeline-title">After World War II & Chinese Civil War</div>
+          <p>After Japan’s defeat in World War II, Taiwan came under the Republic of China government. In 1949, after losing the Chinese Civil War to the Communists, Chiang Kai-shek’s Nationalist government retreated to Taiwan.</p>
+        </div>
+
+        <div class="timeline-event">
+          <div class="timeline-time">1949 – 1987</div>
+          <div class="timeline-title">Martial Law & Cold War Taiwan</div>
+          <p>Taiwan was ruled under martial law for decades. It was anti-communist, heavily militarized and supported by the United States during the Cold War, while also building an export-driven economy.</p>
+        </div>
+
+        <div class="timeline-event">
+          <div class="timeline-time">1987 – Present</div>
+          <div class="timeline-title">Democratization</div>
+          <p>Martial law ended in 1987. Taiwan transformed into one of Asia’s most vibrant democracies, with free elections, a strong civil society, lively media and a growing Taiwanese identity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CULTURE -->
+  <section>
+    <span class="tag">Culture</span>
+    <h2>Chinese heritage, Japanese traces & indigenous identity</h2>
+
+    <div class="card">
+      <p>
+        Taiwan’s culture is a beautiful mix. You can see Chinese temples, Japanese-era train stations, indigenous festivals, American pop culture, Buddhist and Taoist rituals, and ultra-modern tech life all existing together.
+      </p>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Temple Life</h3>
+          <p>Taiwanese temples are colorful, emotional and very alive. People visit to pray for exams, love, health, business, family and protection. Offerings, incense, fortune blocks and festivals are part of daily spiritual life.</p>
+        </div>
+
+        <div class="feature-block">
+          <h3>Japanese Influence</h3>
+          <p>Japan ruled Taiwan for 50 years, and the influence is still visible in hot spring culture, railway heritage, architecture, food, school systems and even the positive image many Taiwanese people have of Japan today.</p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-block">
+          <h3>Indigenous Taiwan</h3>
+          <p>Taiwan has multiple officially recognized indigenous groups, each with distinct languages, music, clothing and traditions. Their cultures are especially visible in eastern Taiwan and mountain regions.</p>
+        </div>
+
+        <div class="feature-block">
+          <h3>Modern Identity</h3>
+          <p>Many people in Taiwan have Chinese ancestry, but younger generations increasingly identify as Taiwanese. This identity is shaped by democracy, local culture, history and the island’s separate political experience.</p>
+        </div>
+      </div>
+
+      <h3 style="color: #486b5d; margin-top: 25px; margin-bottom: 10px; font-size: 20px;">
+        Interesting Facts
+      </h3>
+
+      <ul>
+        <li>Taipei 101 was once the tallest building in the world.</li>
+        <li>Bubble tea was invented in Taiwan and became a global drink phenomenon.</li>
+        <li>Taiwan’s high-speed rail connects Taipei to the south in around 1.5–2 hours.</li>
+        <li>Many elderly Taiwanese people learned Japanese during the colonial period.</li>
+        <li>Taiwan is crossed by the Tropic of Cancer, giving it both subtropical and tropical zones.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- LANGUAGE -->
+  <section>
+    <span class="tag">Language</span>
+    <h2>Communication</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Official Language:</strong> Mandarin Chinese is the main official language used in education, media and government.</li>
+        <li><strong>Traditional Characters:</strong> Taiwan uses traditional Chinese characters, unlike mainland China where simplified characters are used.</li>
+        <li><strong>Taiwanese Hokkien:</strong> Widely spoken in daily life, markets, families and local culture.</li>
+        <li><strong>Hakka:</strong> Spoken by Taiwan’s Hakka communities, especially in certain towns and rural areas.</li>
+        <li><strong>Indigenous Languages:</strong> Taiwan’s indigenous groups preserve Austronesian languages with deep historical importance.</li>
+        <li><strong>English:</strong> Increasingly common in Taipei and among young people, but not universal outside tourist areas.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CITIES -->
+  <section>
+    <span class="tag">Journey</span>
+    <h2>Places We Visited</h2>
+    <div class="cities">
+      <a class="city" href="Taipei/taipei.html">Taipei</a>
+      <a class="city" href="Tainan/tainan.html">Tainan</a>
+      <a class="city" href="Kenting/kenting.html">Kenting</a>
+      <a class="city" href="Taroko/taroko.html">Taroko National Park</a>
+      <a class="city" href="Taipingshan/taipingshan.html">Taipingshan</a>
+      <a class="city" href="Alishan/alishan.html">Alishan</a>
+      <a class="city" href="Kaohsiung/kaohsiung.html">Kaohsiung</a>
+    </div>
+  </section>
+
+</div>
 
 </body>
 </html>
