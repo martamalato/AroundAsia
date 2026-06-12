@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hong Kong | Around Asia</title>
+
+<style>
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  background: #f7f3ed;
+  color: #222;
+  line-height: 1.6;
+}
+
+.hero {
+  height: 45vh;
+  background: url("hongkong.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+  color: white;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+}
+
+.hero h1 {
+  font-size: 52px;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.container {
+  max-width: 1050px;
+  margin: auto;
+  padding: 50px 25px;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+h2 {
+  color: #486b5d;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 16px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  margin-bottom: 25px;
+}
+
+.card:last-child {
+  margin-bottom: 0;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  background: #486b5d;
+  color: white;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.stat-box {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  border-top: 3px solid #486b5d;
+}
+
+.stat-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #777;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+}
+
+.stat-sub {
+  font-size: 13px;
+  color: #555;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+.feature-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.feature-block {
+  background: #fbf9f6;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #486b5d;
+}
+
+.feature-block h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #486b5d;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  border-left: 2px solid #eae4da;
+}
+
+.timeline-event {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-event:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-event::before {
+  content: "";
+  position: absolute;
+  left: -37px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #486b5d;
+  border: 4px solid white;
+}
+
+.timeline-time {
+  font-weight: 700;
+  color: #486b5d;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.timeline-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+ul {
+  padding-left: 20px;
+  margin: 10px 0 0 0;
+}
+
+li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+.cities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.city {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid transparent;
+}
+
+.city::after {
+  content: "→";
+  color: #486b5d;
+  transition: transform 0.2s;
+}
+
+.city:hover {
+  border-color: #486b5d;
+  color: #486b5d;
+  background: #fbf9f6;
+  transform: translateY(-2px);
+}
+
+.city:hover::after {
+  transform: translateX(4px);
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <h1>Hong Kong</h1>
+</div>
+
+<div class="container">
+
+<section>
+  <span class="tag">Overview</span>
+  <h2>Skyscrapers, mountains & one of Asia’s most layered identities</h2>
+  <div class="card">
+    <p>
+      Hong Kong is one of the most fascinating places in Asia: a city of glass towers, neon streets, mountain trails, temples, ferries, finance, Cantonese food and complex political history.
+    </p>
+    <p>
+      What makes Hong Kong so unique is the contrast. It feels intensely urban, but around 70% of the territory is mountains, forests, reservoirs, country parks and undeveloped land. One moment you are surrounded by skyscrapers; the next you can be hiking above the sea.
+    </p>
+  </div>
+</section>
+
+<section>
+  <span class="tag">Numbers</span>
+  <h2>Key Facts & Demographics</h2>
+  <div class="stats-grid">
+    <div class="stat-box">
+      <div class="stat-label">Population</div>
+      <div class="stat-value">~7.5M</div>
+      <div class="stat-sub">One of the densest urban territories in the world.</div>
+    </div>
+
+    <div class="stat-box">
+      <div class="stat-label">Nature</div>
+      <div class="stat-value">~70%</div>
+      <div class="stat-sub">Mountains, country parks, reservoirs and undeveloped land.</div>
+    </div>
+
+    <div class="stat-box">
+      <div class="stat-label">Political Status</div>
+      <div class="stat-value">SAR</div>
+      <div class="stat-sub">A Special Administrative Region of China under “One Country, Two Systems”.</div>
+    </div>
+
+    <div class="stat-box">
+      <div class="stat-label">Currency</div>
+      <div class="stat-value">HKD</div>
+      <div class="stat-sub">Hong Kong uses its own currency, the Hong Kong Dollar.</div>
+    </div>
+
+    <div class="stat-box">
+      <div class="stat-label">Language</div>
+      <div class="stat-value">Cantonese</div>
+      <div class="stat-sub">Cantonese dominates daily life, while English remains widely used in business and tourism.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="tag">Daily Life</span>
+  <h2>Dim sum, ferries, vertical living & mountain escapes</h2>
+  <div class="card">
+    <p>
+      Daily life in Hong Kong is fast, vertical and incredibly efficient. People move through dense streets, metro stations, food halls, markets and towers with a rhythm that feels both chaotic and organized.
+    </p>
+
+    <div class="feature-row">
+      <div class="feature-block">
+        <h3>Cantonese Food Culture</h3>
+        <p>
+          Hong Kong is a paradise for Cantonese food: dim sum, roast goose, wonton noodles, pineapple buns, egg tarts and strong milk tea. Even tiny local restaurants can serve food with world-class precision.
+        </p>
+      </div>
+
+      <div class="feature-block">
+        <h3>Mountain City</h3>
+        <p>
+          Despite the skyline, Hong Kong is full of nature. Hiking trails, beaches and islands are part of local life, making the city feel like a mix between financial capital and tropical mountain escape.
+        </p>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="feature-block">
+        <h3>Vertical Living</h3>
+        <p>
+          Hong Kong grew upward because land is limited. Residential towers, office blocks, shopping malls and metro stations are stacked together in one of the world’s most vertical urban landscapes.
+        </p>
+      </div>
+
+      <div class="feature-block">
+        <h3>Star Ferry & Harbour Life</h3>
+        <p>
+          The Star Ferry has connected Hong Kong Island and Kowloon since the colonial era. Crossing Victoria Harbour is still one of the simplest and most beautiful ways to understand the city.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="tag">History</span>
+  <h2>From Opium Wars to “One Country, Two Systems”</h2>
+  <div class="card">
+    <p>
+      Hong Kong’s modern identity was shaped by war, trade, colonialism and its unusual return to China. Its legal and political status is one of the most important reasons the city feels different from mainland China.
+    </p>
+
+    <div class="timeline" style="margin-top: 25px;">
+      <div class="timeline-event">
+        <div class="timeline-time">1839 – 1842</div>
+        <div class="timeline-title">First Opium War</div>
+        <p>
+          Britain fought Qing China after disputes over the opium trade. China’s defeat led to the Treaty of Nanking, which ceded Hong Kong Island to Britain.
+        </p>
+      </div>
+
+      <div class="timeline-event">
+        <div class="timeline-time">1860</div>
+        <div class="timeline-title">Kowloon Added</div>
+        <p>
+          After the Second Opium War, Britain gained control of the Kowloon Peninsula, expanding the colonial settlement beyond Hong Kong Island.
+        </p>
+      </div>
+
+      <div class="timeline-event">
+        <div class="timeline-time">1898</div>
+        <div class="timeline-title">The New Territories Lease</div>
+        <p>
+          Britain leased the New Territories from China for 99 years. This lease became central to the eventual 1997 handover.
+        </p>
+      </div>
+
+      <div class="timeline-event">
+        <div class="timeline-time">1941 – 1945</div>
+        <div class="timeline-title">Japanese Occupation</div>
+        <p>
+          During World War II, Hong Kong was occupied by Japan, causing hardship, population decline and economic disruption.
+        </p>
+      </div>
+
+      <div class="timeline-event">
+        <div class="timeline-time">1997</div>
+        <div class="timeline-title">Handover to China</div>
+        <p>
+          Britain returned Hong Kong to China. Hong Kong became a Special Administrative Region under the principle of “One Country, Two Systems”.
+        </p>
+      </div>
+
+      <div class="timeline-event">
+        <div class="timeline-time">1997 – 2047</div>
+        <div class="timeline-title">The SAR Period</div>
+        <p>
+          Hong Kong was promised a high degree of autonomy, with its own legal system, currency, immigration controls and civil liberties for 50 years after the handover.
+        </p>
+      </div>
+
+      <div class="timeline-event">
+        <div class="timeline-time">Today</div>
+        <div class="timeline-title">The Future Question</div>
+        <p>
+          The big debate is what Hong Kong’s identity and autonomy will look like as 2047 approaches. In recent years, Beijing’s influence has increased, making the city’s future a major political question.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="tag">Urban Legends</span>
+  <h2>Kowloon Walled City & Chungking Mansions</h2>
+  <div class="card">
+    <p>
+      Some of Hong Kong’s most fascinating places are not just tourist spots, but urban legends. They tell the story of density, migration, survival, crime, cinema and globalization.
+    </p>
+
+    <div class="feature-row">
+      <div class="feature-block">
+        <h3>Kowloon Walled City</h3>
+        <p>
+          Once a legal grey zone, Kowloon Walled City became one of the most densely populated places on Earth. By the 1980s, tens of thousands lived in a chaotic maze of dark corridors, rooftop extensions, factories, dentists, gambling rooms and unregulated buildings.
+        </p>
+      </div>
+
+      <div class="feature-block">
+        <h3>Cyberpunk Inspiration</h3>
+        <p>
+          Its dark, layered, almost impossible architecture inspired films, anime, video games and cyberpunk aesthetics. It was demolished in the 1990s and replaced by a public park, but its image still shapes how people imagine futuristic urban chaos.
+        </p>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="feature-block">
+        <h3>Chungking Mansions</h3>
+        <p>
+          We stayed at Chungking Mansions in Tsim Sha Tsui, one of Hong Kong’s most famous buildings. It is packed with guesthouses, curry restaurants, money changers, traders, backpackers and immigrants from all over the world.
+        </p>
+      </div>
+
+      <div class="feature-block">
+        <h3>From Notorious to Iconic</h3>
+        <p>
+          In the 1970s and 1980s, Chungking Mansions had a reputation for crime, gangs, smuggling and counterfeit goods. Today it is much safer, but still feels intense, multicultural and cinematic. It also inspired Wong Kar-wai’s iconic film <em>Chungking Express</em>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="tag">Food</span>
+  <h2>Pineapple buns, roast goose & milk tea</h2>
+  <div class="card">
+    <p>
+      Hong Kong food is one of the best ways to understand the city: Cantonese traditions, British colonial habits, street snacks, luxury restaurants and tiny family-run places all exist side by side.
+    </p>
+
+    <ul>
+      <li><strong>Pineapple Bun:</strong> Despite the name, it contains no pineapple. The name comes from the golden, crunchy crust.</li>
+      <li><strong>Dim Sum:</strong> Small dishes served with tea, one of the most important Cantonese food traditions.</li>
+      <li><strong>Roast Goose:</strong> Crispy skin, rich meat and one of Hong Kong’s most famous dishes.</li>
+      <li><strong>Egg Tarts:</strong> A sweet pastry shaped by British and Portuguese influences.</li>
+      <li><strong>Milk Tea:</strong> Strong black tea with evaporated milk, smooth, bold and very local.</li>
+    </ul>
+
+    <div class="feature-row">
+      <div class="feature-block">
+        <h3>Yat Lok Roast Goose</h3>
+        <p>
+          One of Hong Kong’s most famous roast goose spots, known for its Michelin recognition and its intense, crispy, juicy Cantonese roast style.
+        </p>
+      </div>
+
+      <div class="feature-block">
+        <h3>Food as Identity</h3>
+        <p>
+          In Hong Kong, food is not just eating. It is family, speed, memory, status, comfort and daily routine, from luxury dim sum halls to simple noodle shops.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="tag">Culture</span>
+  <h2>Horse racing, cinema & Cantonese identity</h2>
+  <div class="card">
+    <p>
+      Hong Kong culture is shaped by Cantonese traditions, British colonial influence, finance, migration, cinema and its role as a bridge between China and the wider world.
+    </p>
+
+    <div class="feature-row">
+      <div class="feature-block">
+        <h3>Happy Valley Horse Racing</h3>
+        <p>
+          Horse racing was introduced under British rule and remains one of Hong Kong’s most iconic social events. Wednesday nights at Happy Valley feel like a mix of sport, outdoor party and city ritual, surrounded by skyscrapers.
+        </p>
+      </div>
+
+      <div class="feature-block">
+        <h3>Hong Kong Cinema</h3>
+        <p>
+          Hong Kong shaped global cinema through action films, martial arts, crime dramas and directors like Wong Kar-wai. The city’s density, neon and mood made it one of the most cinematic places in Asia.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="tag">Fun Facts</span>
+  <h2>Things that make Hong Kong unforgettable</h2>
+  <div class="card">
+    <ul>
+      <li>Hong Kong has its own currency, legal system and immigration rules.</li>
+      <li>Nearly 70% of the territory is mountains, forests and protected nature.</li>
+      <li>The city is famous for having one of the world’s most dramatic skylines.</li>
+      <li>Kowloon Walled City was once among the densest places ever built.</li>
+      <li>The Star Ferry has crossed Victoria Harbour since the 19th century.</li>
+      <li>Hong Kong has more than 260 islands.</li>
+      <li>Cantonese is central to local identity, even though Mandarin and English are also important.</li>
+      <li>Many apartments are extremely small because land is limited and housing prices are high.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <span class="tag">Journey</span>
+  <h2>Places We Visited</h2>
+  <div class="cities">
+    <a class="city" href="Hong Kong Island/hongkongisland.html">Hong Kong Island</a>
+    <a class="city" href="Kowloon/kowloon.html">Kowloon</a>
+    <a class="city" href="Victoria Peak/victoriapeak.html">Victoria Peak</a>
+    <a class="city" href="Chungking Mansions/chungkingmansions.html">Chungking Mansions</a>
+    <a class="city" href="Happy Valley/happyvalley.html">Happy Valley</a>
+  </div>
+</section>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>South Korea | Around Asia</title>
+
+<style>
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  background: #f7f3ed;
+  color: #222;
+  line-height: 1.6;
+}
+
+.hero {
+  height: 45vh;
+  background: url("southkorea.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+  color: white;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+}
+
+.hero h1 {
+  font-size: 52px;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.container {
+  max-width: 1050px;
+  margin: auto;
+  padding: 50px 25px;
+}
+
+section { margin-bottom: 60px; }
+
+h2 {
+  color: #486b5d;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 16px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  margin-bottom: 25px;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  background: #486b5d;
+  color: white;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.stat-box {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  border-top: 3px solid #486b5d;
+}
+
+.stat-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #777;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+}
+
+.stat-sub {
+  font-size: 13px;
+  color: #555;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+.feature-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.feature-block {
+  background: #fbf9f6;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #486b5d;
+}
+
+.feature-block h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #486b5d;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  border-left: 2px solid #eae4da;
+}
+
+.timeline-event {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-event::before {
+  content: "";
+  position: absolute;
+  left: -37px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #486b5d;
+  border: 4px solid white;
+}
+
+.timeline-time {
+  font-weight: 700;
+  color: #486b5d;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.timeline-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+ul {
+  padding-left: 20px;
+  margin: 10px 0 0 0;
+}
+
+li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.cities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.city {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid transparent;
+}
+
+.city::after {
+  content: "→";
+  color: #486b5d;
+  transition: transform 0.2s;
+}
+
+.city:hover {
+  border-color: #486b5d;
+  color: #486b5d;
+  background: #fbf9f6;
+  transform: translateY(-2px);
+}
+
+.city:hover::after {
+  transform: translateX(4px);
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <h1>South Korea</h1>
+</div>
+
+<div class="container">
+
+<section>
+  <span class="tag">Overview</span>
+  <h2>A country where ancient palaces meet neon cities</h2>
+  <div class="card">
+    <p>
+      South Korea feels like a place living in two timelines at once. One moment you are walking between royal palaces, Buddhist temples and traditional hanok houses; the next you are surrounded by 24-hour cafés, beauty stores, K-pop billboards, gaming culture and some of the fastest technology in the world.
+    </p>
+    <p>
+      What makes the country so fascinating is the speed of its transformation. After colonization, war and extreme poverty, South Korea became one of Asia’s richest and most innovative economies in only a few generations — often called the “Miracle on the Han River.”
+    </p>
+  </div>
+</section>
+
+<section>
+  <span class="tag">Numbers</span>
+  <h2>Key Facts & Demographics</h2>
+  <div class="stats-grid">
+    <div class="stat-box">
+      <div class="stat-label">Population</div>
+      <div class="stat-value">~51.6M</div>
+      <div class="stat-sub">Most people live in highly urbanized areas, especially around Seoul and the northwest corridor.</div>
+    </div>
+
+    <div class="stat-box">
+      <div class="stat-label">Economic Scale</div>
+      <div class="stat-value">~$1.9T</div>
+      <div class="stat-sub">One of Asia’s largest economies, powered by technology, exports and advanced manufacturing.</div>
+    </div>
+
+    <div class="stat-box">
+      <div class="stat-label">Capital</div>
+      <div class="stat-value">Seoul</div>
+      <div class="stat-sub">A megacity mixing royal palaces, mountains, cafés, nightlife, fashion and futuristic infrastructure.</div>
+    </div>
+
+    <div class="stat-box">
+      <div class="stat-label">Currency</div>
+      <div class="stat-value">₩ Won</div>
+      <div class="stat-sub">A coffee is often around ₩4,000–₩6,000, while budget meals can still be found in markets and small restaurants.</div>
+    </div>
+
+    <div class="stat-box">
+      <div class="stat-label">Global Influence</div>
+      <div class="stat-value">K-Wave</div>
+      <div class="stat-sub">K-pop, K-dramas, Korean skincare, cinema, food and fashion have become major global cultural exports.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="tag">Daily Life</span>
+  <h2>Cafés, convenience stores, beauty culture & mountain escapes</h2>
+  <div class="card">
+    <p>
+      Korean daily life is fast, organized and social. Cities feel incredibly efficient: metro systems are clean, convenience stores are everywhere, cafés are part of daily life, and food culture is deeply connected to sharing.
+    </p>
+
+    <div class="feature-row">
+      <div class="feature-block">
+        <h3>Café Culture</h3>
+        <p>
+          South Korea takes cafés seriously. Seoul alone feels like a museum of aesthetic coffee shops: minimalist cafés, rooftop cafés, hanok cafés, themed cafés and bakeries filled with perfect pastries.
+        </p>
+      </div>
+
+      <div class="feature-block">
+        <h3>Food Rituals</h3>
+        <p>
+          Korean meals are often shared. Barbecue, hot pots, fried chicken, kimchi stews, bibimbap and street food markets all show how food is both comfort and social ritual.
+        </p>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="feature-block">
+        <h3>Beauty & Fashion</h3>
+        <p>
+          Seoul is one of Asia’s beauty capitals. Skincare, hair salons, fashion districts and cosmetic shops are everywhere, especially in places like Myeongdong, Hongdae, Gangnam and Seongsu.
+        </p>
+      </div>
+
+      <div class="feature-block">
+        <h3>Mountains Everywhere</h3>
+        <p>
+          Even in Seoul, nature is close. Hiking is part of Korean culture, with locals often fully dressed in technical hiking gear for weekend climbs around Bukhansan, Namsan or city fortress walls.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="tag">Economy</span>
+  <h2>The Miracle on the Han River</h2>
+  <div class="card">
+    <p>
+      South Korea’s economic rise is one of the most impressive modern transformations in the world. After the Korean War, the country was extremely poor and heavily damaged. Today, it is home to global giants like Samsung, Hyundai, LG and SK.
+    </p>
+    <p>
+      The economy grew through export-focused industrialization, strong education, government planning and huge family-controlled companies called <strong>chaebols</strong>. These companies helped turn Korea into a powerhouse in ships, cars, electronics, semiconductors and batteries.
+    </p>
+
+    <div class="feature-row">
+      <div class="feature-block">
+        <h3>Semiconductors</h3>
+        <p>
+          South Korea is one of the most important countries in the world for memory chips. Samsung and SK Hynix are essential players in the global semiconductor supply chain.
+        </p>
+      </div>
+
+      <div class="feature-block">
+        <h3>Soft Power</h3>
+        <p>
+          South Korea does not only export products — it exports culture. K-pop, K-dramas, Korean cinema, food, beauty and fashion created one of the strongest “soft power” waves in the world.
+        </p>
+      </div>
+    </div>
+
+    <h3 style="color: #486b5d; margin-top: 25px; margin-bottom: 10px; font-size: 20px;">Key Growth Drivers:</h3>
+    <ul>
+      <li><strong>Chaebols:</strong> Samsung, Hyundai, LG, SK and other giant business groups.</li>
+      <li><strong>Education:</strong> A highly competitive school and university culture.</li>
+      <li><strong>Exports:</strong> Cars, ships, electronics, chips, batteries and cultural products.</li>
+      <li><strong>Technology:</strong> Fast internet, digital infrastructure and advanced manufacturing.</li>
+      <li><strong>Global culture:</strong> K-pop, K-dramas, skincare and cinema increasing Korea’s worldwide influence.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <span class="tag">History</span>
+  <h2>From kingdoms to colonization, war and democracy</h2>
+  <div class="card">
+    <p>
+      Korea’s history is layered, emotional and essential to understanding the country today. Its identity was shaped by ancient kingdoms, Confucian values, Japanese occupation, national division, war, dictatorship, protest and an incredible democratic transformation.
+    </p>
+
+    <div class="timeline" style="margin-top: 25px;">
+      <div class="timeline-event">
+        <div class="timeline-time">57 BC – 668 AD</div>
+        <div class="timeline-title">Three Kingdoms Period</div>
+        <p>
+          Korea was divided between Goguryeo, Baekje and Silla. These kingdoms shaped early Korean culture, Buddhism, architecture and regional identity.
+        </p>
+      </div>
+
+      <div class="timeline-event">
+        <div class="timeline-time">1392 – 1897</div>
+        <div class="timeline-title">Joseon Dynasty</div>
+        <p>
+          The Joseon era deeply shaped Korean identity. Confucian values, royal palaces, traditional clothing, social hierarchy and the Korean alphabet Hangul all became central to Korean culture.
+        </p>
+      </div>
+
+      <div class="timeline-event">
+        <div class="timeline-time">1910 – 1945</div>
+        <div class="timeline-title">Japanese Occupation</div>
+        <p>
+          Korea was colonized by Japan. This period remains deeply painful because Korean language, culture and independence movements were heavily suppressed.
+        </p>
+      </div>
+
+      <div class="timeline-event">
+        <div class="timeline-time">1945</div>
+        <div class="timeline-title">Division of Korea</div>
+        <p>
+          After Japan’s defeat in World War II, Korea was divided along the 38th parallel, with Soviet influence in the north and American influence in the south.
+        </p>
+      </div>
+
+      <div class="timeline-event">
+        <div class="timeline-time">1950 – 1953</div>
+        <div class="timeline-title">Korean War</div>
+        <p>
+          North Korea invaded South Korea in 1950, beginning a devastating war. The conflict ended with an armistice, not a peace treaty, meaning the two Koreas are technically still divided by unresolved conflict.
+        </p>
+      </div>
+
+      <div class="timeline-event">
+        <div class="timeline-time">1960s – 1980s</div>
+        <div class="timeline-title">Dictatorship & Industrial Growth</div>
+        <p>
+          South Korea industrialized rapidly under authoritarian governments. The economy grew quickly, but political freedom was limited and protests were often suppressed.
+        </p>
+      </div>
+
+      <div class="timeline-event">
+        <div class="timeline-time">1987 – Present</div>
+        <div class="timeline-title">Democracy & Global Korea</div>
+        <p>
+          Mass protests helped bring direct presidential elections and democratic reforms. Since then, South Korea has become a modern democracy, global cultural power and advanced economy.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="tag">North & South</span>
+  <h2>The most famous border in the world</h2>
+  <div class="card">
+    <p>
+      One of the most unique parts of South Korea is that the country lives next to one of the world’s most militarized borders: the DMZ. The division between North and South Korea is not just political — it separates families, economies, ideologies and two completely different ways of life.
+    </p>
+
+    <div class="feature-row">
+      <div class="feature-block">
+        <h3>The DMZ</h3>
+        <p>
+          The Demilitarized Zone is a buffer area between North and South Korea. Ironically, because people cannot freely enter much of it, parts of the DMZ have become an accidental wildlife refuge.
+        </p>
+      </div>
+
+      <div class="feature-block">
+        <h3>Constant Tension</h3>
+        <p>
+          South Koreans live with the reality of North Korea nearby, but daily life continues normally. In Seoul, this contrast feels surreal: skyscrapers, cafés and nightlife exist only a short distance from the border.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="tag">Culture</span>
+  <h2>Tradition, pressure and pop culture</h2>
+  <div class="card">
+    <p>
+      South Korean culture is full of contrasts. It can be very traditional and family-oriented, but also hyper-modern, creative and trend-driven. Respect for age, education and social harmony still matters, while youth culture pushes fashion, music and digital trends forward.
+    </p>
+
+    <ul>
+      <li><strong>Hangul:</strong> Korea’s alphabet is one of the most logical writing systems in the world.</li>
+      <li><strong>Hanbok:</strong> Traditional clothing often worn around palaces and cultural areas.</li>
+      <li><strong>Kimchi:</strong> Fermented cabbage and vegetables, eaten with almost everything.</li>
+      <li><strong>K-pop:</strong> A highly polished music industry that became a global phenomenon.</li>
+      <li><strong>K-dramas:</strong> Korean series helped spread language, fashion, food and tourism worldwide.</li>
+      <li><strong>Education pressure:</strong> Academic competition is intense and shapes much of young people’s lives.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <span class="tag">Journey</span>
+  <h2>Places To Explore</h2>
+  <div class="cities">
+    <a class="city" href="Seoul/seoul.html">Seoul</a>
+    <a class="city" href="Sokcho/sokcho.html">Sokcho</a>
+    <a class="city" href="Gangneung/gangneung.html">Gangneung</a>
+    <a class="city" href="Yangyang/yangyang.html">Yangyang</a>
+    <a class="city" href="Gyeongju/gyeongju.html">Gyeongju</a>
+    <a class="city" href="Busan/busan.html">Busan</a>
+    <a class="city" href="Tongyeong/tongyeong.html">Tongyeong</a>
+    <a class="city" href="DMZ/dmz.html">DMZ</a>
+  </div>
+</section>
+
+</div>
+
+</body>
+</html>

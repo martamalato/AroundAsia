@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japan | Around Asia</title>
+
+<style>
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  background: #f7f3ed;
+  color: #222;
+  line-height: 1.6;
+}
+
+.hero {
+  height: 45vh;
+  background: url("japan.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+  color: white;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+}
+
+.hero h1 {
+  font-size: 52px;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.container {
+  max-width: 1050px;
+  margin: auto;
+  padding: 50px 25px;
+}
+
+section { margin-bottom: 60px; }
+
+h2 {
+  color: #486b5d;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 16px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  margin-bottom: 25px;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  background: #486b5d;
+  color: white;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.stat-box {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  border-top: 3px solid #486b5d;
+}
+
+.stat-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #777;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+}
+
+.stat-sub {
+  font-size: 13px;
+  color: #555;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+.feature-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.feature-block {
+  background: #fbf9f6;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #486b5d;
+}
+
+.feature-block h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #486b5d;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  border-left: 2px solid #eae4da;
+}
+
+.timeline-event {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-event:last-child { margin-bottom: 0; }
+
+.timeline-event::before {
+  content: "";
+  position: absolute;
+  left: -37px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #486b5d;
+  border: 4px solid white;
+}
+
+.timeline-time {
+  font-weight: 700;
+  color: #486b5d;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.timeline-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+ul {
+  padding-left: 20px;
+  margin: 10px 0 0 0;
+}
+
+li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.cities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.city {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid transparent;
+}
+
+.city::after {
+  content: "→";
+  color: #486b5d;
+  transition: transform 0.2s;
+}
+
+.city:hover {
+  border-color: #486b5d;
+  color: #486b5d;
+  background: #fbf9f6;
+  transform: translateY(-2px);
+}
+
+.city:hover::after {
+  transform: translateX(4px);
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <h1>Japan</h1>
+</div>
+
+<div class="container">
+
+<section>
+  <span class="tag">Overview</span>
+  <h2>Ancient traditions, futuristic cities & a society unlike anywhere else</h2>
+  <div class="card">
+    <p>
+      Japan is one of those countries that feels both extremely modern and deeply traditional at the same time. Neon cities, bullet trains, robot cafés and perfectly organized convenience stores exist beside wooden temples, quiet shrines, tea ceremonies, mountain villages and centuries-old festivals.
+    </p>
+    <p>
+      What makes Japan so fascinating is not only what you see, but how society works: the respect for rules, the silence on trains, the obsession with detail, the seasonal rituals, the food culture, and the way even everyday objects can feel carefully designed.
+    </p>
+  </div>
+</section>
+
+<section>
+  <span class="tag">Numbers</span>
+  <h2>Key Facts & Geography</h2>
+  <div class="stats-grid">
+    <div class="stat-box">
+      <div class="stat-label">Population</div>
+      <div class="stat-value">~123M</div>
+      <div class="stat-sub">One of the world's oldest societies, with a shrinking population and very high life expectancy.</div>
+    </div>
+
+    <div class="stat-box">
+      <div class="stat-label">Islands</div>
+      <div class="stat-value">14,000+</div>
+      <div class="stat-sub">Japan is an island nation stretching from snowy Hokkaido to tropical Okinawa.</div>
+    </div>
+
+    <div class="stat-box">
+      <div class="stat-label">Mountains</div>
+      <div class="stat-value">~73%</div>
+      <div class="stat-sub">Most of the country is mountainous, so cities are concentrated along coastal plains.</div>
+    </div>
+
+    <div class="stat-box">
+      <div class="stat-label">Forests</div>
+      <div class="stat-value">~67%</div>
+      <div class="stat-sub">Despite its megacities, Japan is one of the most forested developed countries.</div>
+    </div>
+
+    <div class="stat-box">
+      <div class="stat-label">Currency</div>
+      <div class="stat-value">¥ Yen</div>
+      <div class="stat-sub">Japan uses the Japanese Yen. Convenience-store meals, ramen shops and transport passes make budgeting flexible.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="tag">Daily Life</span>
+  <h2>Convenience, order & tiny rituals</h2>
+  <div class="card">
+    <p>
+      Daily life in Japan is full of small systems that make everything feel efficient. Trains arrive on time, shops package things beautifully, people queue neatly, and even public toilets can feel more advanced than an airport lounge.
+    </p>
+
+    <div class="feature-row">
+      <div class="feature-block">
+        <h3>Konbini Culture</h3>
+        <p>
+          Japanese convenience stores are almost a lifestyle. At 7-Eleven, Lawson or FamilyMart, you can buy proper meals, withdraw money, pay bills, print documents, buy tickets and find surprisingly good desserts at any hour.
+        </p>
+      </div>
+
+      <div class="feature-block">
+        <h3>Vending Machines</h3>
+        <p>
+          Japan has millions of vending machines, selling hot coffee, cold tea, soups, snacks and sometimes very unexpected items. You find them in cities, villages, stations and even quiet mountain roads.
+        </p>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="feature-block">
+        <h3>Quiet Public Spaces</h3>
+        <p>
+          Trains are usually calm and quiet. Talking loudly on the phone is considered rude, and the shared respect for public space is one of the first things visitors notice.
+        </p>
+      </div>
+
+      <div class="feature-block">
+        <h3>Design Everywhere</h3>
+        <p>
+          From food packaging to train signs, manhole covers, stationery and hotel rooms, Japan has a strong culture of detail. Even ordinary things often feel intentional and beautifully organized.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="tag">Nature</span>
+  <h2>Volcanoes, earthquakes, hot springs & seasonal beauty</h2>
+  <div class="card">
+    <p>
+      Japan sits on the Pacific Ring of Fire, where several tectonic plates meet. This makes the country prone to earthquakes, volcanoes and tsunamis — but it also created its dramatic mountains, hot springs and volcanic landscapes.
+    </p>
+
+    <div class="feature-row">
+      <div class="feature-block">
+        <h3>Onsens</h3>
+        <p>
+          Because of volcanic activity, Japan has thousands of natural hot springs. Bathing in an onsen is not just relaxing; it is a deep part of Japanese culture, especially in mountain towns and rural inns.
+        </p>
+      </div>
+
+      <div class="feature-block">
+        <h3>Seasons Matter</h3>
+        <p>
+          Japan celebrates the seasons intensely: cherry blossoms in spring, festivals in summer, red maple leaves in autumn and snowy landscapes in winter. The calendar shapes food, travel and local traditions.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="tag">History</span>
+  <h2>Isolation, samurai rule, rapid modernization & reinvention</h2>
+  <div class="card">
+    <p>
+      Japan's history helps explain why the country feels so distinct. For centuries, it absorbed influence from China and Korea, then developed its own social systems, religions, arts and military culture. Later, it closed itself off from much of the world, before modernizing at incredible speed.
+    </p>
+
+    <div class="timeline" style="margin-top: 25px;">
+      <div class="timeline-event">
+        <div class="timeline-time">Ancient Japan</div>
+        <div class="timeline-title">Shinto, clans & early kingdoms</div>
+        <p>
+          Japan's early culture was shaped by local beliefs, nature worship and powerful clans. Shinto, Japan's indigenous religion, grew from the idea that spirits called kami exist in mountains, rivers, trees and ancestors.
+        </p>
+      </div>
+
+      <div class="timeline-event">
+        <div class="timeline-time">538 AD onward</div>
+        <div class="timeline-title">Buddhism arrives</div>
+        <p>
+          Buddhism arrived through Korea and China, adding temples, rituals, philosophy and art to Japanese life. Instead of replacing Shinto, it blended with it.
+        </p>
+      </div>
+
+      <div class="timeline-event">
+        <div class="timeline-time">1185 – 1868</div>
+        <div class="timeline-title">Samurai & Shoguns</div>
+        <p>
+          For centuries, Japan was ruled by military governments led by shoguns. Samurai were not just warriors; they became a powerful social class with their own codes, aesthetics and political role.
+        </p>
+      </div>
+
+      <div class="timeline-event">
+        <div class="timeline-time">1603 – 1868</div>
+        <div class="timeline-title">Edo Period & Isolation</div>
+        <p>
+          During the Tokugawa era, Japan was largely closed to foreign influence. This long isolation helped preserve and refine many uniquely Japanese traditions, from kabuki theatre to tea culture and urban merchant life.
+        </p>
+      </div>
+
+      <div class="timeline-event">
+        <div class="timeline-time">1868</div>
+        <div class="timeline-title">Meiji Restoration</div>
+        <p>
+          Japan reopened and modernized extremely fast, building railways, factories, schools, a modern army and new industries. In only decades, it transformed from a feudal society into a major world power.
+        </p>
+      </div>
+
+      <div class="timeline-event">
+        <div class="timeline-time">1945 onward</div>
+        <div class="timeline-title">Post-war reinvention</div>
+        <p>
+          After World War II and the atomic bombings of Hiroshima and Nagasaki, Japan rebuilt itself into one of the world's leading economies, known for cars, electronics, robotics, trains, design and pop culture.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="tag">Culture</span>
+  <h2>Shinto shrines, anime, food rituals & social codes</h2>
+  <div class="card">
+    <p>
+      Japanese culture is not one single thing — it is a mix of spirituality, discipline, aesthetics, politeness, creativity and playfulness. The same country that created Zen gardens and tea ceremonies also gave the world Pokémon, Nintendo, anime, karaoke, emoji and instant noodles.
+    </p>
+
+    <div class="feature-row">
+      <div class="feature-block">
+        <h3>Religion Without Labels</h3>
+        <p>
+          Many Japanese people do not identify strongly with one religion, but still visit Shinto shrines, attend Buddhist funerals and celebrate seasonal rituals. A person can be blessed at a shrine, marry in a Western-style chapel and have a Buddhist funeral without contradiction.
+        </p>
+      </div>
+
+      <div class="feature-block">
+        <h3>Food as Craft</h3>
+        <p>
+          Food is treated with huge respect. Sushi, ramen, tempura, soba, udon, yakitori, curry rice and okonomiyaki all show the Japanese focus on precision, seasonality and regional identity.
+        </p>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="feature-block">
+        <h3>Pop Culture</h3>
+        <p>
+          Anime, manga, gaming and character culture are a major part of Japan's global image. From Studio Ghibli to Pokémon and Nintendo, Japan turned imagination into one of its strongest exports.
+        </p>
+      </div>
+
+      <div class="feature-block">
+        <h3>Social Harmony</h3>
+        <p>
+          Japanese society strongly values respect, punctuality and not disturbing others. Bowing, removing shoes, speaking softly and following small rules are all part of maintaining harmony in shared spaces.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="tag">Economy</span>
+  <h2>Technology, cars, gaming & global influence</h2>
+  <div class="card">
+    <p>
+      Japan became famous for its post-war economic miracle. Companies like Toyota, Honda, Sony, Nintendo, Panasonic and Canon helped shape the modern world through cars, cameras, electronics, games and entertainment.
+    </p>
+    <p>
+      Today, Japan remains a major economic power, but it faces important challenges: an aging population, low birth rate, rural depopulation and pressure to keep innovating in a changing Asia.
+    </p>
+
+    <h3 style="color: #486b5d; margin-top: 25px; margin-bottom: 10px; font-size: 20px;">Things Japan gave the world:</h3>
+    <ul>
+      <li><strong>Bullet trains:</strong> The Shinkansen became a global symbol of speed and punctuality.</li>
+      <li><strong>Gaming culture:</strong> Nintendo, PlayStation, Pokémon, Mario and Zelda.</li>
+      <li><strong>Hybrid cars:</strong> Toyota helped popularize fuel-efficient hybrid vehicles.</li>
+      <li><strong>Karaoke:</strong> Now a global nightlife ritual.</li>
+      <li><strong>Emoji:</strong> First developed in Japan before becoming a universal digital language.</li>
+      <li><strong>Instant noodles:</strong> One of the simplest but most global food inventions.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <span class="tag">Peculiarities</span>
+  <h2>Small things that make Japan unforgettable</h2>
+  <div class="card">
+    <ul>
+      <li><strong>No tipping:</strong> Good service is expected and tipping can even feel awkward.</li>
+      <li><strong>Lost wallets often return:</strong> Japan has a strong culture of honesty and lost-property systems.</li>
+      <li><strong>Blue traffic lights:</strong> Some traffic lights are described as blue due to older language categories for green and blue.</li>
+      <li><strong>Perfect packaging:</strong> Even a convenience-store snack can be wrapped like a gift.</li>
+      <li><strong>Train station melodies:</strong> Many stations have unique little jingles when trains arrive or depart.</li>
+      <li><strong>Seasonal everything:</strong> Drinks, sweets, decorations and menus change constantly with the seasons.</li>
+      <li><strong>Animal islands:</strong> Japan has famous cat islands, rabbit islands and deer roaming freely in Nara.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <span class="tag">Journey</span>
+  <h2>Places To Explore</h2>
+  <div class="cities">
+    <a class="city" href="Tokyo/tokyo.html">Tokyo</a>
+    <a class="city" href="Kyoto/kyoto.html">Kyoto</a>
+    <a class="city" href="Osaka/osaka.html">Osaka</a>
+    <a class="city" href="Nara/nara.html">Nara</a>
+    <a class="city" href="Hiroshima/hiroshima.html">Hiroshima</a>
+    <a class="city" href="Fukuoka/fukuoka.html">Fukuoka</a>
+    <a class="city" href="Hakone/hakone.html">Hakone</a>
+    <a class="city" href="Okinawa/okinawa.html">Okinawa</a>
+  </div>
+</section>
+
+</div>
+
+</body>
+</html>
